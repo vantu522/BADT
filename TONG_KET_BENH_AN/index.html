@@ -14,7 +14,7 @@
                       <b>1. Quá trình bệnh lý và diễn biến lâm sàng:</b>
                     </span>
                     <hs-textarea-line rows="5" [value]="context.tempData.hsTongKetBenhAn.QuaTrinhBenhLy" update="tempData.hsTongKetBenhAn.QuaTrinhBenhLy"></hs-textarea-line>
-                         <hs-textarea-line label="+ Phân biệt:" [value]="context.tempData.hsThongTinBenhAn.ChanDoanPhanBiet" update="tempData.hsThongTinBenhAn.ChanDoanPhanBiet"></hs-textarea-line>
+                      
                   </div>
                 </div>
                 <div class="row no-gutters">
@@ -34,39 +34,22 @@
                   </div>
                 </div>
                 <div class="row no-gutters">
-                  <div class="col-6">
-                    <hs-input-check beforeText="- Phẫu thuật:" [selectedValue]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" [value]="true"></hs-input-check>&nbsp;&nbsp;
+                        <span>Giải phẫu bệnh <i>(khi có sinh thiết)</i></span>
+                        <hs-textarea-line rows="1" [value]="context.tempData.hsTongKetBenhAn.GiaiPhauBenh" update="tempData.hsTongKetBenhAn.GiaiPhauBenh"></hs-textarea-line>
+
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-3">
+                    <hs-input-check beforeText="1. Lành tính" [selectedValue]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" [value]="true"></hs-input-check>&nbsp;&nbsp;
                   </div>
-                  <div class="col-6">
-                    <hs-input-check beforeText="- Thủ thuật:" [selectedValue]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" [value]="false"></hs-input-check>&nbsp;&nbsp;
+                  <div class="col-3">
+                    <hs-input-check beforeText="2. Nghi ngờ" [selectedValue]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" [value]="false"></hs-input-check>&nbsp;&nbsp;
+                  </div>
+                  <div class="col-3">
+                    <hs-input-check beforeText="3. Ác tính" [selectedValue]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" [value]="false"></hs-input-check>&nbsp;&nbsp;
                   </div>
                 </div>
-                <table class="table table-ehr-bordered input-ehr-sm">
-                    <tr>
-                        <td class="text-center" width="20%">Giờ,ngày</td>
-                        <td class="text-center" width="30%">Phương pháp phẫu thuật/vô cảm</td>
-                        <td class="text-center" width="25%">Bác sĩ phẫu thuật</td>
-                        <td class="text-center" width="25%">Bác sĩ gây mê</td>
-                    </tr>
-                    <tr>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri1"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat1"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe1"></hs-textarea-line></td>
-                    </tr>
-                    <tr>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri2"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat2"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe2"></hs-textarea-line></td>
-                    </tr>
-                    <tr>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri3"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri3"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat3"></hs-textarea-line></td>
-                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe3"></hs-textarea-line></td>
-                    </tr>
-                </table>
+             
                 <div class="row no-gutters" style="margin-top:10px">
                   <div class="col-12">
                     <span>
