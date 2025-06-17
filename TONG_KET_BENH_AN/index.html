@@ -1,0 +1,186 @@
+
+        <hoso-page style="font-size: 12pt; max-height: unset; height: auto; padding-bottom: 20px">
+          <div class="row no-gutters">
+            <div class="col-12 font-weight-bold">
+              TỔNG KẾT BỆNH ÁN:
+            </div>
+          </div>
+          <table class="table table-ehr-bordered" style="margin-bottom: 10px;">
+            <tr>
+              <td colspan="4">
+                <div class="row no-gutters">
+                  <div class="col-12">
+                    <span>
+                      <b>1. Quá trình bệnh lý và diễn biến lâm sàng:</b>
+                    </span>
+                    <hs-textarea-line rows="5" [value]="context.tempData.hsTongKetBenhAn.QuaTrinhBenhLy" update="tempData.hsTongKetBenhAn.QuaTrinhBenhLy"></hs-textarea-line>
+                         <hs-textarea-line label="+ Phân biệt:" [value]="context.tempData.hsThongTinBenhAn.ChanDoanPhanBiet" update="tempData.hsThongTinBenhAn.ChanDoanPhanBiet"></hs-textarea-line>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-12">
+                    <span>
+                      <b>2. Tóm tắt kết quả xét nghiệm cận lâm sàng có giá trị chẩn đoán:</b>
+                    </span>
+                    <hs-textarea-line rows="5" [value]="context.tempData.hsTongKetBenhAn.TomTatXetNghiem" update="tempData.hsTongKetBenhAn.TomTatXetNghiem"></hs-textarea-line>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-12">
+                    <span>
+                      <b>3. Phương pháp điều trị:</b>
+                    </span>
+                    <hs-textarea-line rows="5" [value]="context.tempData.hsTongKetBenhAn.PhuongPhapDieuTri" update="tempData.hsTongKetBenhAn.PhuongPhapDieuTri"></hs-textarea-line>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-6">
+                    <hs-input-check beforeText="- Phẫu thuật:" [selectedValue]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" [value]="true"></hs-input-check>&nbsp;&nbsp;
+                  </div>
+                  <div class="col-6">
+                    <hs-input-check beforeText="- Thủ thuật:" [selectedValue]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.IsPhauThuat" [value]="false"></hs-input-check>&nbsp;&nbsp;
+                  </div>
+                </div>
+                <table class="table table-ehr-bordered input-ehr-sm">
+                    <tr>
+                        <td class="text-center" width="20%">Giờ,ngày</td>
+                        <td class="text-center" width="30%">Phương pháp phẫu thuật/vô cảm</td>
+                        <td class="text-center" width="25%">Bác sĩ phẫu thuật</td>
+                        <td class="text-center" width="25%">Bác sĩ gây mê</td>
+                    </tr>
+                    <tr>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri1"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat1"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe1" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe1"></hs-textarea-line></td>
+                    </tr>
+                    <tr>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri2"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat2"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe2" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe2"></hs-textarea-line></td>
+                    </tr>
+                    <tr>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayDieuTri3"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri3"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiPhauThuat3"></hs-textarea-line></td>
+                        <td><hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe3" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.BacSiGayMe3"></hs-textarea-line></td>
+                    </tr>
+                </table>
+                <div class="row no-gutters" style="margin-top:10px">
+                  <div class="col-12">
+                    <span>
+                      <b>4. Tình trạng người bệnh ra viện:</b>
+                    </span>
+                    <hs-textarea-line rows="5" [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                  </div>
+                </div>
+                <div class="row no-gutters" style="margin-top:10px">
+                  <div class="col-12">
+                    <span>
+                      <b>5. Hướng điều trị và các chế độ tiếp theo:</b>
+                    </span>
+                    <hs-textarea-line rows="5" [value]="context.tempData.hsTongKetBenhAn.HuongDieuTriTiepTheo" update="tempData.hsTongKetBenhAn.HuongDieuTriTiepTheo"></hs-textarea-line>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" width="40%" class="text-center font-weight-bold">
+                Hồ sơ, phim, ảnh
+              </td>
+              <td rowspan="4" class="text-center font-weight-bold">
+                <span> Người giao hồ sơ</span>
+                <hs-signature
+                  signaturePositionCode="NguoiGiaoHoSo"
+                  [signatureHistory]="context.tempData.DSHSLichSuKySos['NguoiGiaoHoSo']">
+                </hs-signature>
+              </td>
+              <td rowspan="8" width="30%" class="text-center font-weight-bold">
+                <hs-datepicker [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayKetThuc" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.NgayKetThuc"
+                      format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy" inputStyle="text-align: center; font-size: 11pt"></hs-datepicker>
+                <span>Bác sĩ điều trị</span>
+                <hs-signature
+                  signaturePositionCode="BacSiDieuTri"
+                  [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSiDieuTri']">
+                </hs-signature>
+              </td>
+            </tr>
+            <tr>
+              <td width="30%" class="text-center ">
+                Loại
+              </td>
+              <td width="10%" class="text-center ">
+                Số tờ
+              </td>
+            </tr>
+            <tr>
+              <td>
+                XQuang
+              </td>
+              <td>
+                <hs-input-text maxlength="5" [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_xQuang" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_xQuang"></hs-input-text>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                CT Scanner
+              </td>
+              <td>
+                <hs-input-text maxlength="5" [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_CT" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_CT"></hs-input-text>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Siêu âm
+              </td>
+              <td>
+                <hs-input-text maxlength="5" [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_sieuAm" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_sieuAm"></hs-input-text>
+              </td>
+              <td rowspan="4" class="text-center font-weight-bold">
+                <span> Người nhận hồ sơ</span>
+                <hs-signature
+                  signaturePositionCode="NguoiNhanHoSo"
+                  [signatureHistory]="context.tempData.DSHSLichSuKySos['NguoiNhanHoSo']">
+                </hs-signature>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Xét nghiệm
+              </td>
+              <td>
+                <hs-input-text maxlength="5" [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_xetNghiem" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_xetNghiem"></hs-input-text>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class=" input-ehr">
+                  <span>Khác</span>
+                  <hs-input-text maxlength="25" [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.CLS_Khac" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.CLS_Khac"></hs-input-text>
+                </div>
+              </td>
+              <td>
+                <hs-input-text maxlength="5" [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_khac" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_khac"></hs-input-text>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Tổng bộ hồ sơ
+              </td>
+              <td>
+                <hs-input-text maxlength="5" [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_toanBoHS" update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.SoTo_toanBoHS"></hs-input-text>
+              </td>
+            </tr>
+          </table>
+          <div class="row no-gutters">
+            <div class="text-center" style=" bottom: 0px;font-size:12px;margin-top:-20px;margin-left:400px">
+              <span>
+                <i>04</i>
+              </span>
+            </div>
+            <div class="text-right" style=" bottom: 0px;font-size:12px;margin-top:-20px;margin-left:200px">
+            </div>
+          </div>
+        </hoso-page>
+      
