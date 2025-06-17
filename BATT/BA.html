@@ -1,0 +1,242 @@
+
+        <hoso-page style="font-size: 12pt; max-height: unset; height: auto; padding-bottom: 20px">
+            <div class="row no-gutters" style="page-break-inside: avoid;">
+                <div class="col-12 font-weight-bold input-ehr-lg">A- BỆNH ÁN</div>
+                <div class="col-12">
+                    <hs-textarea-line label="I. Lý do vào viện:" labelStyle="font-weight: bold"
+                     [value]="context.tempData.hsThongTinBenhAn.LyDoVaoVien" update="tempData.hsThongTinBenhAn.LyDoVaoVien"></hs-textarea-line>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-12 font-weight-bold input-ehr-lg">
+                    II. Hỏi bệnh:
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <span class="font-weight-bold">1. Quá trình bệnh lý: </span>
+                    <span class="font-italic input-ehr-sm">(tình trạng trước khi mắc bệnh, các biểu hiện ban đầu, sự tiến triển của bệnh, quá trình điều trị và tình trạng bệnh hiện nay).</span>
+                    <hs-textarea-line
+                     [value]="context.tempData.hsThongTinBenhAn.QuaTrinhBenhLy" update="tempData.hsThongTinBenhAn.QuaTrinhBenhLy"></hs-textarea-line>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <span class="font-weight-bold">2. Tiền sử bệnh: </span><br />
+                    <span>+ Bản thân: </span><span class="font-italic input-ehr-sm">(Sự phát triển về tâm thần và thể chất từ nhỏ đến lớn, những bệnh đã mắc phải, tình hình học tập, khả năng lao động công tác, đặc điểm tính cách từ nhỏ đến lớn)</span>
+                    <hs-textarea-line
+                     [value]="context.tempData.hsThongTinBenhAn.TienSuBanThan" update="tempData.hsThongTinBenhAn.TienSuBanThan"></hs-textarea-line>
+                     <span>+ Gia đình:</span><span class="font-italic input-ehr-sm">(Những người trong gia đình: bệnh đã mắc, đời sống, tinh thần, vật chất v.v...)</span>
+                    <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.TienSuGiaDinh" update="tempData.hsThongTinBenhAn.TienSuGiaDinh"></hs-textarea-line>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <span class="font-weight-bold">3. Đặc điểm liên quan bệnh: </span>
+             
+                </div>
+            </div>
+            <table class="table table-ehr-bordered input-ehr-sm">
+                <tr>
+                    <td class="text-center" width="5%">TT</td>
+                    <td class="text-center" width="12%"> </td>
+                    <td class="text-center" width="8%">Ký hiệu</td>
+                    <td class="text-center" width="25%">Thời gian (tính theo tháng)</td>
+                    <td class="text-center" width="5%">TT</td>
+                    <td class="text-center" width="12%"> </td>
+                    <td class="text-center" width="8%">Ký hiệu</td>
+                    <td class="text-center" width="25%">Thời gian (tính theo tháng)</td>
+                </tr>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>- Dị ứng</td>
+                    <td class="text-center">
+                        <hs-input-check size="md" [selectedValue]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsDiUng" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsDiUng" [value]="true"></hs-input-check>
+                    </td>
+                    <td>
+                        <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianDiUng" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianDiUng"></hs-textarea-line>
+                    </td>
+                    <td class="text-center">4</td>
+                    <td>- Thuốc lá</td>
+                    <td class="text-center">
+                        <hs-input-check size="md" [selectedValue]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsThuocLa" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsThuocLa" [value]="true"></hs-input-check>
+                    </td>
+                    <td>
+                        <hs-textarea-line size="md" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianThuocLa" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianThuocLa"></hs-textarea-line>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td>- Ma túy</td>
+                    <td class="text-center">
+                        <hs-input-check size="md" [selectedValue]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsMaTuy" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsMaTuy" [value]="true"></hs-input-check>
+                    </td>
+                    <td>
+                        <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianMaTuy" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianMaTuy"></hs-textarea-line>
+                    </td>
+                    <td class="text-center">5</td>
+                    <td>- Thuốc lào</td>
+                    <td class="text-center">
+                        <hs-input-check size="md" [selectedValue]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsThuocLao" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsThuocLao" [value]="true"></hs-input-check>
+                    </td>
+                    <td>
+                        <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianThuocLao" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianThuocLao"></hs-textarea-line>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td>- Rượu, bia</td>
+                    <td class="text-center">
+                        <hs-input-check size="md" [selectedValue]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsRuouBia" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsRuouBia" [value]="true"></hs-input-check>
+                    </td>
+                    <td>
+                        <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianRuouBia" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianRuouBia"></hs-textarea-line>
+                    </td>
+                    <td class="text-center">6</td>
+                    <td>- Khác</td>
+                    <td class="text-center">
+                        <hs-input-check size="md" [selectedValue]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsKhac" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_IsKhac" [value]="true"></hs-input-check>
+                    </td>
+                    <td>
+                        <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianKhac" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.DacDiem_ThoiGianKhac"></hs-textarea-line>
+                    </td>
+                </tr>
+            </table>
+            <div class="row m-t-sm no-gutters">
+                <div class="col-12 font-weight-bold input-ehr-lg">
+                    III. Khám bệnh:
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <span class="font-weight-bold">1. Toàn thân:</span> <span><i class="input-ehr-sm">(da niêm mạc, hệ thống hạch, tuyến giáp, vị trí, kích thước, số lượng, di động v.v )</i></span>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-9">
+                    <hs-textarea-line rows="6" [value]="context.tempData.hsThongTinBenhAn.ToanThan" update="tempData.hsThongTinBenhAn.ToanThan"></hs-textarea-line>
+                </div>
+                <div class="col-3">
+                    <table class="table table-ehr-bordered input-ehr-sm">
+                        <tr>
+                            <td>
+                                <div class="input-ehr">
+                                    <span class="text-nowrap">Mạch: </span>
+                                     <hs-input-text maxlength="4" [value]="context.tempData.hsThongTinBenhAn.Mach" update="tempData.hsThongTinBenhAn.Mach"></hs-input-text>
+                                    <span> lần/phút</span>
+                                </div>
+                                <div class="input-ehr">
+                                    <span class="text-nowrap">Nhiệt độ: </span>
+                                     <hs-input-text maxlength="4" [value]="context.tempData.hsThongTinBenhAn.NhietDo" update="tempData.hsThongTinBenhAn.NhietDo"></hs-input-text>
+                                    <span> &deg;C</span>
+                                </div>
+                                <div class="input-ehr">
+                                    <span class="text-nowrap">Huyết áp: </span>
+                                    <hs-input-text maxlength="4" [value]="context.tempData.hsThongTinBenhAn.HuyetApToiDa" update="tempData.hsThongTinBenhAn.HuyetApToiDa"></hs-input-text>
+                                    <span>/</span>
+                                    <hs-input-text maxlength="4" [value]="context.tempData.hsThongTinBenhAn.HuyetApToiThieu" update="tempData.hsThongTinBenhAn.HuyetApToiThieu"></hs-input-text>
+                                    <span> mmHg</span>
+                                </div>
+                                <div class="input-ehr">
+                                    <span class="text-nowrap">Nhịp thở: </span>
+                                     <hs-input-text maxlength="4" [value]="context.tempData.hsThongTinBenhAn.NhipTho" update="tempData.hsThongTinBenhAn.NhipTho"></hs-input-text>
+                                    <span> lần/phút</span>
+                                </div>
+                                <div class="input-ehr">
+                                    <span class="text-nowrap">Cân nặng: </span>
+                                     <hs-input-text maxlength="4" [value]="context.tempData.hsThongTinBenhAn.CanNang" update="tempData.hsThongTinBenhAn.CanNang"></hs-input-text>
+                                    <span> kg</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+ 
+            <div class="font-weight-bold">2. Các cơ quan: </div>
+            <hs-textarea-line label="+ Tuần hoàn:" [value]="context.tempData.hsThongTinBenhAn.TuanHoan" update="tempData.hsThongTinBenhAn.TuanHoan"></hs-textarea-line>
+            <hs-textarea-line label="+ Hô hấp:" [value]="context.tempData.hsThongTinBenhAn.HoHap" update="tempData.hsThongTinBenhAn.HoHap"></hs-textarea-line>
+            <hs-textarea-line label="+ Tiêu hóa:" [value]="context.tempData.hsThongTinBenhAn.TieuHoa" update="tempData.hsThongTinBenhAn.TieuHoa"></hs-textarea-line>
+            <hs-textarea-line label="+ Thận - Tiết niệu - sinh dục:" [value]="context.tempData.hsThongTinBenhAn.ThanTietNieuSinhDuc" update="tempData.hsThongTinBenhAn.ThanTietNieuSinhDuc"></hs-textarea-line>
+          
+            <hs-textarea-line label="+ Cơ -  Xương - Khớp:" [value]="context.tempData.hsThongTinBenhAn.CoXuongKhop" update="tempData.hsThongTinBenhAn.CoXuongKhop"></hs-textarea-line>
+            <hs-textarea-line label="+ Tai mũi họng:" [value]="context.tempData.hsThongTinBenhAn.TaiMuiHong" update="tempData.hsThongTinBenhAn.TaiMuiHong"></hs-textarea-line>
+            <hs-textarea-line label="+ Răng hàm mặt:" [value]="context.tempData.hsThongTinBenhAn.RangHamMat" update="tempData.hsThongTinBenhAn.RangHamMat"></hs-textarea-line>
+            <hs-textarea-line label="+ Mắt:" [value]="context.tempData.hsThongTinBenhAn.Mat" update="tempData.hsThongTinBenhAn.Mat"></hs-textarea-line>
+            <hs-textarea-line label="+ Nội tiết, dinh dưỡng và các bệnh lý khác:" [value]="context.tempData.hsThongTinBenhAn.CoQuanKhac" update="tempData.hsThongTinBenhAn.CoQuanKhac"></hs-textarea-line>
+            <div class="font-weight-bold">3.Khám: </div>
+            <div class="font-weight-bold">a.Thần kinh: </div>
+            <hs-textarea-line label="Dây thần kinh sọ não:" [value]="context.tempData.hsThongTinBenhAn.TaiMuiHong" update="tempData.hsThongTinBenhAn.TaiMuiHong"></hs-textarea-line>
+             <hs-textarea-line label="Đáy mắt:" [value]="context.tempData.hsThongTinBenhAn.TaiMuiHong" update="tempData.hsThongTinBenhAn.TaiMuiHong"></hs-textarea-line>
+            <hs-textarea-line label="Vận động:" [value]="context.tempData.hsThongTinBenhAn.TaiMuiHong" update="tempData.hsThongTinBenhAn.TaiMuiHong"></hs-textarea-line>
+            <hs-textarea-line label="Trương lực co:" [value]="context.tempData.hsThongTinBenhAn.TaiMuiHong" update="tempData.hsThongTinBenhAn.TaiMuiHong"></hs-textarea-line>
+            <hs-textarea-line label="Cảm giác (nông, sâu):" [value]="context.tempData.hsThongTinBenhAn.TaiMuiHong" update="tempData.hsThongTinBenhAn.TaiMuiHong"></hs-textarea-line>
+            <hs-textarea-line label="Phản xạ:" [value]="context.tempData.hsThongTinBenhAn.TaiMuiHong" update="tempData.hsThongTinBenhAn.TaiMuiHong"></hs-textarea-line>
+              <div class="font-weight-bold">b.Tâm thần: </div>
+                    <hs-textarea-line label="Biểu hiện chung:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.BieuHienChung" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.BieuHienChung"></hs-textarea-line>
+            <div class="row no-gutters">
+                <span style="flex: 0 0 20%">Ý định hướng lực:</span>
+                <div class="col">
+                    <hs-textarea-line label="- Không gian:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.KhongGian" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.KhongGian"></hs-textarea-line>
+                    <hs-textarea-line label="- Thời gian:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.ThoiGian" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.ThoiGian"></hs-textarea-line>
+                    <hs-textarea-line label="- Bản thân:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.BanThan" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.BanThan"></hs-textarea-line>
+                </div>
+            </div>
+            <hs-textarea-line label="Tình cảm, cảm xúc:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.TinhCamCamXuc" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.TinhCamCamXuc"></hs-textarea-line>
+            <hs-textarea-line label="Tri giác (khả năng nhận thức thực tại khách quan, các rối loạn):" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.TriGiac" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.TriGiac"></hs-textarea-line>
+            <div class="row no-gutters">
+                <div style="flex: 0 0 20%">Tư duy:</div>
+                <div class="col">
+                    <hs-textarea-line label="- Hình thức:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.HinhThuc" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.HinhThuc"></hs-textarea-line>
+                    <hs-textarea-line label="- Nội dung:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NoiDung" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NoiDung"></hs-textarea-line>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div style="flex: 0 0 20%">Hành vi tác phong:</div>
+                <div class="col">
+                    <hs-textarea-line label="- Hoạt động có ý chí:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.HoatDongCoYChi" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.HoatDongCoYChi"></hs-textarea-line>
+                    <hs-textarea-line label="- Hoạt động bản năng:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.HoatDongBanNang" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.HoatDongBanNang"></hs-textarea-line>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div style="flex: 0 0 20%">Trí nhớ:</div>
+                <div class="col">
+                    <hs-textarea-line label="- Nhớ máy móc:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NhoMayMoc" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NhoMayMoc"></hs-textarea-line>
+                    <hs-textarea-line label="- Nhớ không hiểu:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NhoKhongHieu" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NhoKhongHieu"></hs-textarea-line>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div style="flex: 0 0 20%">Trí năng:</div>
+                <div class="col">
+                    <hs-textarea-line label="- Khả năng phân tích:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.KhaNangPhanTich" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.KhaNangPhanTich"></hs-textarea-line>
+                    <hs-textarea-line label="- Khả năng tổng hợp:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.KhaNangTongHop" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.KhaNangTongHop"></hs-textarea-line>
+                </div>
+            </div>
+            <hs-textarea-line label="Chú ý:" [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.ChuY" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.ChuY"></hs-textarea-line>
+
+            <div><b>4. Các xét nghiệm cận lâm sàng cần làm</b></div>
+            <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.XetNghiemCLS" update="tempData.hsThongTinBenhAn.XetNghiemCLS"></hs-textarea-line>
+            <div><b>5. Tóm tắt triệu chứng và hội chứng</b></div>
+            <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.TomTatBenhAn" update="tempData.hsThongTinBenhAn.TomTatBenhAn"></hs-textarea-line>
+            <div><b>IV. Chẩn đoán khi vào khoa điều trị</b></div>
+            <hs-textarea-line label="+ Bệnh chính:" [value]="context.tempData.hsThongTinBenhAn.ChanDoanBenhChinh" update="tempData.hsThongTinBenhAn.ChanDoanBenhChinh"></hs-textarea-line>
+            <hs-textarea-line label="+ Bệnh kèm theo<i>(nếu có):</i>" [value]="context.tempData.hsThongTinBenhAn.ChanDoanBenhKemTheo" update="tempData.hsThongTinBenhAn.ChanDoanBenhKemTheo"></hs-textarea-line>
+            <hs-textarea-line label="+ Phân biệt:" [value]="context.tempData.hsThongTinBenhAn.ChanDoanPhanBiet" update="tempData.hsThongTinBenhAn.ChanDoanPhanBiet"></hs-textarea-line>
+            <div><b>V. Tiên lượng</b></div>
+            <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.TienLuong" update="tempData.hsThongTinBenhAn.TienLuong"></hs-textarea-line>
+            <div><b>VI. Hướng điều trị</b></div>
+            <hs-textarea-line [value]="context.tempData.hsThongTinBenhAn.HuongDieuTri" update="tempData.hsThongTinBenhAn.HuongDieuTri"></hs-textarea-line>
+            <div class="row no-gutters">
+                <div class="col-6 offset-6">
+                    <hs-datepicker [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                      format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy" inputStyle="text-align: center"></hs-datepicker>
+                </div>
+                <div class="col-6 offset-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt"><b>Bác sĩ làm bệnh án</b></div>
+                    <hs-signature
+                      signaturePositionCode="BacSiLamBenhAn"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSiLamBenhAn']">
+                    </hs-signature>
+                </div>
+            </div>
+          <div style="height: 30px;"></div>
+        </hoso-page>
+      

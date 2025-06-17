@@ -1,0 +1,505 @@
+
+        <hoso-page style="font-size: 12pt; line-height: 20px; max-height: unset;">
+            <div class="row no-gutters" style="line-height: normal;">
+                <div class="col-8">
+                    <div class="row no-gutters">
+                        <div class="col-5">
+                            <hs [text]="context.tempData.hsBenhAn.BenhAnChiTietObj.CoSoTrucThuoc"></hs>
+                            <hs [text]="context.tempData.hsBenhAn.BenhAnChiTietObj.TenBenhVien" class="input-ehr font-weight-bold text-uppercase"></hs>
+                        </div>
+                        <div class="col-7 align-bottom font-weight-bold text-center input-ehr-xl">
+                            BỆNH ÁN&nbsp; <hs class="text-uppercase" tag="span" [if]="context.tempData.hsBenhAn.IsNgoaiTru">NGOẠI TRÚ</hs>
+                            <hs class="text-uppercase" tag="span" [text]="context.tempData.hsBenhAn.LoaiBenhAn.Ten"></hs>
+                        </div>
+                        <div class="col-11">
+                            <div class="input-ehr">
+                                <span>KHOA:&nbsp;<hs tag="b" [text]="context.tempData.hsBenhAn.TenKhoaKham"></hs></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="input-ehr ">
+                        <hs-textarea-line label="Số VV:" [readonly]="true"
+                        [value]="context.tempData.hsBenhAn.SoVaoVien"></hs-textarea-line>
+                    </div>
+                    <div class="input-ehr">
+                        <hs-textarea-line label="Số lưu trữ:" [readonly]="true"
+                        [value]="context.tempData.hsBenhAn.SoLuuTru"></hs-textarea-line>
+                    </div>
+                    <div class="input-ehr ">
+                        <hs-textarea-line label="Mã YT:" [readonly]="true"
+                        [value]="context.tempData.hsBenhAn.MaYTe"></hs-textarea-line>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row no-gutters">
+                    <div class="col-6">
+                        <hs-phong-giuong-picker
+                          [soPhong]="context.tempData.hsBenhAn.SoPhong" soPhongUpdate="tempData.hsBenhAn.SoPhong"
+                          [soGiuong]="context.tempData.hsBenhAn.SoGiuong" soGiuongUpdate="tempData.hsBenhAn.SoGiuong"
+                        ></hs-phong-giuong-picker>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between">
+                      <span class="font-weight-bold">I. HÀNH CHÍNH</span>
+                      <div>
+                        <span>Tuổi&nbsp;</span>
+                        <hs tag="span" [text]="context.tempData.hsBenhAn.DonViTuoi"></hs>
+                      </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-6">
+                    <hs-textarea-line label="1. Họ và tên:" textareaStyle="font-weight: bold; text-transform: uppercase;" [value]="context.tempData.hsBenhAn.BenhNhan.HoTen" update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+                  </div>
+                  <div class="col-5">
+                    <hs-datepicker label="2. Sinh ngày:" [value]="context.tempData.hsBenhAn.BenhNhan.NgaySinh" update="tempData.hsBenhAn.BenhNhan.NgaySinh"></hs-datepicker>
+                  </div>
+                  <div class="col-1">
+                    <div style="display: table; margin-right: 0px; margin-left: auto;">
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.Tuoi" [maskLength]="[1,1]" update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-input-otp>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-6">
+                    <div class="input-ehr">
+                      <span>3. Giới tính:&nbsp;</span>
+                      <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="true" update="tempData.hsBenhAn.BenhNhan.GioiTinh"
+                                      class="i-checks" afterText="1. Nam"></hs-input-check> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNhan.GioiTinh" [value]="false" update="tempData.hsBenhAn.BenhNhan.GioiTinh"
+                                      class="i-checks" afterText="2. Nữ"></hs-input-check>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex">
+                      <span class="text-nowrap" style="line-height: 25px">4. Nghề nghiệp:&nbsp;</span>
+                      <hs-select-line style="width: 0; flex: 1" name="NgheNghiep"
+                        [items]="context.tempData.dmNgheNghiep"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.IdNgheNghiep" bindLabel="Ten" bindValue="Id"
+                        [searchByKeys]="['MaTuDien', 'Ten']"
+                        update="tempData.hsBenhAn.BenhNhan.IdNgheNghiep"
+                      ></hs-select-line>
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.BenhNhan.MaNgheNghiep" [maskLength]="[1,1]" [readonly]="true"></hs-input-otp>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-6">
+                    <div class="d-flex">
+                      <span class="text-nowrap" style="line-height: 25px">5. Dân tộc:&nbsp;</span>
+                      <hs-select-line style="width: 0; flex: 1" name="DanToc"
+                        [items]="context.tempData.dmDanToc"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.IdDanToc" bindLabel="Ten" bindValue="Id"
+                        [searchByKeys]="['MaTuDien', 'Ten']"
+                        update="tempData.hsBenhAn.BenhNhan.IdDanToc"
+                      ></hs-select-line>
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.BenhNhan.MaDanToc" [maskLength]="[1,1]" [readonly]="true"></hs-input-otp>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex">
+                      <span class="text-nowrap" style="line-height: 25px">6. Ngoại kiều:&nbsp;</span>
+                      <hs-select-line style="width: 0; flex: 1" name="NgoaiKieu"
+                        [items]="context.tempData.dmQuocGia"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.IdQuocTich" bindLabel="Ten" bindValue="Id"
+                        [searchByKeys]="['Ma', 'Ten']"
+                        update="tempData.hsBenhAn.BenhNhan.IdQuocTich"
+                      ></hs-select-line>
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.BenhNhan.MaQuocTich" [maskLength]="[1,1]" [readonly]="true"></hs-input-otp>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <hs-textarea-line label="7. Địa chỉ: Số nhà:" [value]="context.tempData.hsBenhAn.BenhNhan.SoNha" update="tempData.hsBenhAn.BenhNhan.SoNha"></hs-textarea-line>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="d-flex">
+                      <span class="text-nowrap" style="line-height: 25px">Xã, phường:&nbsp;</span>
+                      <hs-select-line style="width: 0; flex: 1" name="XaPhuong"
+                        [items]="context.tempData.dmXaPhuong"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.IdXaPhuong" bindLabel="Ten" bindValue="Id"
+                        [searchByKeys]="['Ma', 'Ten']"
+                        update="tempData.hsBenhAn.BenhNhan.IdXaPhuong"
+                      ></hs-select-line>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex">
+                      <span class="text-nowrap" style="line-height: 25px">Huyện (Q, TX):&nbsp;</span>
+                      <hs-select-line style="width: 0; flex: 1" name="QuanHuyen"
+                        [items]="context.tempData.dmQuanHuyen"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.IdQuanHuyen" bindLabel="Ten" bindValue="Id"
+                        [searchByKeys]="['Ma', 'Ten']"
+                        update="tempData.hsBenhAn.BenhNhan.IdQuanHuyen"
+                      ></hs-select-line>
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.BenhNhan.MaHuyen" [maskLength]="[1,1]" [readonly]="true"></hs-input-otp>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex">
+                      <span class="text-nowrap" style="line-height: 25px">Tỉnh, thành phố:&nbsp;</span>
+                      <hs-select-line style="width: 0; flex: 1" name="TinhThanh"
+                        [items]="context.tempData.dmTinhThanh"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.IdTinhThanh" bindLabel="Ten" bindValue="Id"
+                        [searchByKeys]="['Ma', 'Ten']"
+                        update="tempData.hsBenhAn.BenhNhan.IdTinhThanh"
+                      ></hs-select-line>
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.BenhNhan.MaTinh" [maskLength]="[1,1,1]" [readonly]="true"></hs-input-otp>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <hs-textarea-line label="8. Nơi làm việc:" [value]="context.tempData.hsBenhAn.BenhNhan.NoiLamViec" update="hsBenhAn.BenhNhan.NoiLamViec"></hs-textarea-line>
+                  </div>
+                  <div class="col-6">
+                    <span>9. Đối tượng:&nbsp;</span>
+                    <span class="font-italic" style="font-size: 8pt;">
+                        <hs-input-check style="margin-right: 8px" size="md" [selectedValue]="context.tempData.hsBenhAn.DoiTuong" name="IdDoiTuong" update="DoiTuong"
+                                        value="BHYT" afterText="BHYT"></hs-input-check>
+                        <hs-input-check style="margin-right: 8px" size="md" [selectedValue]="context.tempData.hsBenhAn.DoiTuong" name="IdDoiTuong" update="DoiTuong"
+                                        value="THU_PHI" afterText="Thu phí"></hs-input-check>
+                        <hs-input-check style="margin-right: 8px" size="md" [selectedValue]="context.tempData.hsBenhAn.DoiTuong" name="IdDoiTuong" update="DoiTuong"
+                                        value="MIEN_PHI" afterText="Miễn"></hs-input-check>
+                        <hs-input-check style="margin-right: 8px" size="md" [selectedValue]="context.tempData.hsBenhAn.DoiTuong" name="IdDoiTuong" update="DoiTuong"
+                                        value="KHAC" afterText="Khác"></hs-input-check>
+                    </span>
+                  </div>
+                  <div class="col-6">
+                    <hs-datepicker label="10. BHYT giá trị đến ngày:" [value]="context.tempData.hsBenhAn.NgayHetHanBH" update="tempData.hsBenhAn.NgayHetHanBH"></hs-datepicker>
+                  </div>
+                  <div class="col-6">
+                    <div class="input-ehr">
+                      <span>Số thẻ BHYT:&nbsp;</span>
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.SoBHYT" [maskLength]="[2,1,2,2,3,5]" update="tempData.hsBenhAn.SoBHYT"></hs-input-otp>
+                    </div>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-12">
+                    <hs-textarea-line label="11. Họ tên, địa chỉ người nhà khi cần báo tin:" [value]="context.tempData.hsBenhAn.HoTenNguoiNha" update="tempData.hsBenhAn.HoTenNguoiNha"></hs-textarea-line>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-8">
+                    <hs-textarea-line [value]="context.tempData.hsBenhAn.DiaChiNguoiNha" update="tempData.hsBenhAn.DiaChiNguoiNha"></hs-textarea-line>
+                  </div>
+                  <div class="col-4">
+                    <div class="textarea-line">
+                      <span></span>
+                      <hs-textarea-line label="Điện thoại:" [value]="context.tempData.hsBenhAn.DienThoaiNguoiNha" update="tempData.hsBenhAn.DienThoaiNguoiNha"></hs-textarea-line>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="font-weight-bold">II. QUẢN LÝ NGƯỜI BỆNH :</div>
+            <div class="table-container" style="font-size: 11pt">
+                <div class="table-row">
+                  <div class="table-cell" style="flex: 1 1 50%;">
+                    <hs-datepicker label="12. Vào viện:" [value]="context.tempData.hsBenhAn.NgayVaoVien" update="tempData.hsBenhAn.NgayVaoVien" format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy"></hs-datepicker>
+                    <div class="input-ehr">
+                      <span>13. Trực tiếp vào:&nbsp;</span>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="loaiVaoVien" beforeText="1. Cấp cứu" value="CAP_CUU" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.LoaiVaoVien" update="tempData.hsBenhAn.LoaiVaoVien"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="loaiVaoVien" beforeText="2. KKB" value="KKB" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.LoaiVaoVien" update="tempData.hsBenhAn.LoaiVaoVien"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="loaiVaoVien" beforeText="3. Khoa điều trị" value="KHOA_DIEU_TRI" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.LoaiVaoVien" update="tempData.hsBenhAn.LoaiVaoVien"></hs-input-check>
+                    </div>
+                  </div>
+                  <div class="table-cell" style="flex: 1 1 50%;">
+                    <div class="input-ehr">
+                      <span>14.Nơi giới thiệu:&nbsp;</span>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="noiGioiThieu" beforeText="1. Cơ quan y tế" value="CO_QUAN_YTE" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.NoiGioiThieu" update="tempData.hsBenhAn.NoiGioiThieu"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="noiGioiThieu" beforeText="2. Tự đến" value="TU_DEN" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.NoiGioiThieu" update="tempData.hsBenhAn.NoiGioiThieu"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="noiGioiThieu" beforeText="3. Khác" value="KHAC" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.NoiGioiThieu" update="tempData.hsBenhAn.NoiGioiThieu"></hs-input-check>
+                    </div>
+                    <div class="input-ehr">
+                      <span>- Vào viện do bệnh này lần thứ:</span>
+                      <hs-input-otp [value]="context.tempData.hsBenhAn.LanVaoVienDoBenhNay" [maskLength]="[1]" update="tempData.hsBenhAn.LanVaoVienDoBenhNay"></hs-input-otp>
+                    </div>
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="table-cell" style="flex: 1 1 50%">
+                    <div class="row no-gutters">
+                      <div class="col-7"></div>
+                      <div class="col-5" style="font-size:11px"> Ngày/Tháng/Năm | Số ngày ĐT</div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-3">
+                          <span>15. Vào khoa:&nbsp;</span>
+                        </div>
+                        <div class="col-9">
+                          <div class="input-ehr">
+                            <div class="d-flex" style="width: 115px;">
+                              <hs-textarea-line textareaStyle="font-size: 11pt;" [value]="context.tempData.hsBenhAn.MaKhoaBanDau.concatWith(' - ').concatWith(context.tempData.hsBenhAn.TenKhoaBanDau)" [disabled]="true"></hs-textarea-line>
+                            </div>
+                            <hs style="font-size: 10pt; line-height: 25px" pipeName="date" [pipeArgs]="['HH:mm_dd/MM/yyyy']" [text]="context.tempData.hsBenhAn.NgayVaoKhoa"></hs>
+                            <hs-input-otp [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.SoNgayDieuTriKhoaDau" [maskLength]="[1,1]" update="tempData.hsBenhAn.BenhAnChiTietObj.SoNgayDieuTriKhoaDau"></hs-input-otp>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row no-gutters" style="margin-top: 2px;">
+                      <div class="col-3">16. Chuyển khoa</div>
+                      <div class="col-9">
+                        {{#each context.tempData.hsBenhAn.DSChuyenKhoa}}
+                        <div class="input-ehr">
+                          <div class="d-flex" style="width: 115px;">
+                            <hs-textarea-line textareaStyle="font-size: 11pt;" value="{{MaKhoa}} - {{TenKhoaKham}}" [disabled]="true"></hs-textarea-line>
+                          </div>
+                          <hs style="font-size: 10pt; line-height: 25px" pipeName="date" [pipeArgs]="['HH:mm_dd/MM/yyyy']" text="{{NgayChuyen}}"></hs>
+                          <hs-input-otp value="{{SoNgayDieuTri}}" [maskLength]="[1,1]" update="tempData.hsBenhAn.DSChuyenKhoa[{{@index}}].SoNgayDieuTri"></hs-input-otp>
+                        </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                  </div>
+                  <div class="table-cell" style="flex: 1 1 50%;">
+                    <div class="input-ehr">
+                      <span>17.Chuyển viện:&nbsp;</span>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="chuyenVien" beforeText="1. Tuyến trên" value="TUYEN_TREN" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.ChuyenVien" update="tempData.hsBenhAn.ChuyenVien"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="chuyenVien" beforeText="2. Tuyến dưới" value="TUYEN_DUOI" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.ChuyenVien" update="tempData.hsBenhAn.ChuyenVien"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" name="chuyenVien" beforeText="3. CK" value="CK" size="md"
+                      [selectedValue]="context.tempData.hsBenhAn.ChuyenVien" update="tempData.hsBenhAn.ChuyenVien"></hs-input-check>
+                    </div>
+                    <hs-textarea-line [value]="context.tempData.hsBenhAn.TenVienChuyenToi" update="tempData.hsBenhAn.TenVienChuyenToi"
+                      label="- Chuyển đến:"></hs-textarea-line>
+                    <hs-datepicker label="18. Ra viện" format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy" [value]="context.tempData.hsBenhAn.NgayRaVien" update="tempData.hsBenhAn.NgayRaVien"></hs-datepicker>
+                    <div class="input-ehr">
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" beforeText="1. Ra viện" size="md"
+                        [selectedValue]="context.tempData.hsBenhAn.LoaiRaVien" update="tempData.hsBenhAn.LoaiRaVien" name="loaiRaVien" value="RA_VIEN"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" beforeText="2. Chuyển viện" size="md"
+                        [selectedValue]="context.tempData.hsBenhAn.LoaiRaVien" update="tempData.hsBenhAn.LoaiRaVien" name="loaiRaVien" value="CHUYEN_VIEN"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" beforeText="3. Bỏ về" size="md"
+                        [selectedValue]="context.tempData.hsBenhAn.LoaiRaVien" update="tempData.hsBenhAn.LoaiRaVien" name="loaiRaVien" value="BO_VE"></hs-input-check>
+                      <hs-input-check class="font-italic text-nowrap" labelStyle="font-size: 12px;" beforeText="4. Xin về" size="md"
+                        [selectedValue]="context.tempData.hsBenhAn.LoaiRaVien" update="tempData.hsBenhAn.LoaiRaVien" name="loaiRaVien" value="XIN_VE"></hs-input-check>
+                    </div>
+                    <div class="icd-group">
+                        <hs-textarea-line label="19. Tổng số ngày điều trị:" [value]="context.tempData.hsBenhAn.TongSoNgayDieuTri" update="tempData.hsBenhAn.TongSoNgayDieuTri" [readonly]="true"></hs-textarea-line>
+                        <hs-input-otp [maskLength]="[1,1,1]" [value]="context.tempData.hsBenhAn.TongSoNgayDieuTri" update="tempData.hsBenhAn.TongSoNgayDieuTri" [readonly]="true"></hs-input-otp>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="font-weight-bold">III. CHẨN ĐOÁN :</div>
+            <div class="table-container" style="font-size: 11pt">
+                <div class="table-row">
+                    <div class="table-cell" style="flex: 1 1 50%">
+                        <hs-icd-group label="20.Tuyến dưới"
+                          [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdNoiChuyenDen"
+                          [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdNoiChuyenDenMa"
+                          [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdNoiChuyenDenTen"
+                          update="tempData.hsBenhAn.BenhAnChiTietObj.IcdNoiChuyenDen"></hs-icd-group>
+                        <hs-icd-group label="21. Cấp cứu, KKB:"
+                          [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdKKBCC"
+                          [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdKKBCCMa"
+                          [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdKKBCCTen"
+                          update="tempData.hsBenhAn.BenhAnChiTietObj.IcdKKBCC"></hs-icd-group>
+                        <hs-icd-group label="22. Khoa điều trị:"
+                          [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdVaoKhoaDieuTri"
+                          [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdVaoKhoaDieuTriMa"
+                          [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdVaoKhoaDieuTriTen"
+                          update="tempData.hsBenhAn.BenhAnChiTietObj.IcdVaoKhoaDieuTri"></hs-icd-group>
+                        <div class="d-flex">
+                          <span>T</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVT" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVT"></hs-input-text>
+                          <span>N</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVN" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVN"></hs-input-text>
+                          <span>M</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVM" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVM"></hs-input-text>
+                          <span style="white-space: nowrap">Giai đoạn</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVGiaiDoan" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanVVGiaiDoan"></hs-input-text>
+                        </div>
+                        <div class="input-ehr">
+                          <hs-input-wrapper [value]="context.tempData.hsBenhAn.CoTaiBien" update="tempData.hsBenhAn.CoTaiBien">
+                            <label for="i3">- Tai biến: </label>
+                            <input id="i3" type="checkbox"/>
+                          </hs-input-wrapper>
+                          <hs-input-wrapper [value]="context.tempData.hsBenhAn.CoBienChung" update="tempData.hsBenhAn.CoBienChung">
+                            <label for="i4">- Biến chứng:</label>
+                            <input id="i4" type="checkbox"/>
+                          </hs-input-wrapper>
+                        </div>
+                        <hs-input-check labelStyle="font-size: 11px;" size="md" [value]="context.tempData.hsBenhAn.NguyenNhanTBBC" update="tempData.hsBenhAn.NguyenNhanTBBC"
+                        value="DoPhauThuat" [beforeText]="'1.Do phẫu thuật '"></hs-input-check>
+                        <hs-input-check labelStyle="font-size: 11px;" size="md" [value]="context.tempData.hsBenhAn.NguyenNhanTBBC" update="tempData.hsBenhAn.NguyenNhanTBBC"
+                        value="DoGayMe" [beforeText]="'2.Do gây mê '"></hs-input-check>
+                        <hs-input-check labelStyle="font-size: 11px;" size="md" [value]="context.tempData.hsBenhAn.NguyenNhanTBBC" update="tempData.hsBenhAn.NguyenNhanTBBC"
+                        value="DoNhiemTrung" [beforeText]="'3.Do nhiễm trùng '"></hs-input-check>
+                        <hs-input-check labelStyle="font-size: 11px;" size="md" [value]="context.tempData.hsBenhAn.NguyenNhanTBBC" update="tempData.hsBenhAn.NguyenNhanTBBC"
+                        value="Khac" [beforeText]="'4.Khác '"></hs-input-check>
+                        <div class="d-flex justify-content-between">
+                          <div>23.Tổng số ngày điều trị sau phẫu thuật:</div>
+                          <hs-input-otp [maskLength]="[1,1,1]" [value]="context.tempData.hsBenhAn.SoNgayDieuTriSauPT" update="tempData.hsBenhAn.SoNgayDieuTriSauPT"></hs-input-otp>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>24.Tổng số lần phẫu thuật:</div>
+                          <hs-input-otp [maskLength]="[1,1]" [value]="context.tempData.hsBenhAn.SoLanPTT" update="tempData.hsBenhAn.SoLanPTT"></hs-input-otp>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 50%">
+                        <div>25. Ra viện:</div>
+                        <hs-icd-group label="+ Bệnh chính(tổn thương):"
+                            [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdRaVienBenhChinh"
+                            [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdRaVienBenhChinhMa"
+                            [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdRaVienBenhChinhTen"
+                            update="tempData.hsBenhAn.BenhAnChiTietObj.IcdRaVienBenhChinh"></hs-icd-group>
+                        <div class="d-flex">
+                          <span>T</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVT" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVT"></hs-input-text>
+                          <span>N</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVN" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVN"></hs-input-text>
+                          <span>M</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVM" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVM"></hs-input-text>
+                          <span style="white-space: nowrap">Giai đoạn</span>
+                          <hs-input-text [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVGiaiDoan" update="tempData.hsBenhAn.BenhAnChiTietObj.ChanDoanRVGiaiDoan"></hs-input-text>
+                        </div>
+                        <div>+ Bệnh kèm theo:</div>
+                        <hs-icd-group [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.ListIcdRaVienBenhKemTheo"
+                          update="tempData.hsBenhAn.BenhAnChiTietObj.ListIcdRaVienBenhKemTheo" [multiple]="true"></hs-icd-group>
+                        <hs-icd-group label="+ Chẩn đoán trước phẫu thuật:"
+                          [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdTruocPT"
+                          [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdTruocPTMa"
+                          [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdTruocPTTen"
+                          update="tempData.hsBenhAn.BenhAnChiTietObj.IcdTruocPT"></hs-icd-group>
+                        <hs-icd-group label="+ Chẩn đoán sau phẫu thuật:"
+                          [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdSauPT"
+                          [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdSauPTMa"
+                          [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdSauPTTen"
+                          update="tempData.hsBenhAn.BenhAnChiTietObj.IcdSauPT"></hs-icd-group>
+                    </div>
+                </div>
+            </div>
+            <div class="font-weight-bold">IV. TÌNH TRẠNG RA VIỆN :</div>
+            <div class="table-container" style="font-size: 11pt">
+                <div class="table-row">
+                    <div class="table-cell" style="flex: 1 1 40%">
+                        <div>26.Kết quả điều trị</div>
+                        <div class="row no-gutters">
+                            <div class="col-6 pr-1">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="1. Khỏi" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="KHOI"></hs-input-check>
+                            </div>
+                            <div class="col-6">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="2. Đỡ giảm" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="DO_GIAM"></hs-input-check>
+                            </div>
+                            <div class="col-6 pr-1">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="3. Không thay đổi" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="KHONG_THAY_DOI"></hs-input-check>
+                            </div>
+                            <div class="col-6">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="4. Nặng hơn" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="NANG_HON"></hs-input-check>
+                            </div>
+                            <div class="col-6 pr-1">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="5. Tử vong tại cơ sở KBCB" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="TU_VONG"></hs-input-check>
+                            </div>
+                            <div class="col-6">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="6. Tiên lượng nặng xin về" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="TIEN_LUONG_NANG"></hs-input-check>
+                            </div>
+                            <div class="col-6 pr-1">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="7. Chưa xác định" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="CHUA_XAC_DINH"></hs-input-check>
+                            </div>
+                            <div class="col-6">
+                                <hs-input-check class="font-italic d-flex justify-content-between align-items-start" labelStyle="font-size: 12px;" beforeText="8. Tử vong ngoại viện" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.KetQuaDieuTri" update="tempData.hsBenhAn.KetQuaDieuTri" name="KetQuaDieuTri" value="TV_NGOAI_VIEN"></hs-input-check>
+                            </div>
+                            <div class="col-12">
+                                <div>27. Giải phẫu bệnh (khi có sinh thiết): </div>
+                                <div class="row no-gutters">
+                                    <div class="col-4">
+                                        <hs-input-check class="font-italic d-flex align-items-start" labelStyle="font-size: 12px;" beforeText="1. Lành tính" size="md"
+                                          [selectedValue]="context.tempData.hsBenhAn.GiaiPhauBenh" update="tempData.hsBenhAn.GiaiPhauBenh" name="GiaiPhauBenh" value="LANH_TINH"></hs-input-check>
+                                    </div>
+                                    <div class="col-4">
+                                        <hs-input-check class="font-italic d-flex align-items-start" labelStyle="font-size: 12px;" beforeText="2. Nghi ngờ" size="md"
+                                          [selectedValue]="context.tempData.hsBenhAn.GiaiPhauBenh" update="tempData.hsBenhAn.GiaiPhauBenh" name="GiaiPhauBenh" value="NGHI_NGO"></hs-input-check>
+                                    </div>
+                                    <div class="col-4">
+                                        <hs-input-check class="font-italic d-flex align-items-start" labelStyle="font-size: 12px;" beforeText="3. Ác tính" size="md"
+                                          [selectedValue]="context.tempData.hsBenhAn.GiaiPhauBenh" update="tempData.hsBenhAn.GiaiPhauBenh" name="GiaiPhauBenh" value="AC_TINH"></hs-input-check>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 60%">
+                        <hs-datepicker label="28. Tình hình tử vong:" [value]="context.tempData.hsBenhAn.GioTuVong" format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy"
+                          update="tempData.hsBenhAn.GioTuVong"></hs-datepicker>
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <hs-input-check class="font-italic d-flex align-items-start justify-content-between" labelStyle="font-size: 12px;" beforeText="1. Do bệnh" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.NguyenNhanTuVong" update="tempData.hsBenhAn.NguyenNhanTuVong" name="NguyenNhanTuVong" value="DO_BENH"></hs-input-check>
+                            </div>
+                            <div class="col-4">
+                                <hs-input-check class="font-italic d-flex align-items-start justify-content-between" labelStyle="font-size: 12px;" beforeText="2. Do tai biến điều trị" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.NguyenNhanTuVong" update="tempData.hsBenhAn.NguyenNhanTuVong" name="NguyenNhanTuVong" value="DO_TAI_BIEN_DIEU_TRI"></hs-input-check>
+                            </div>
+                            <div class="col-4">
+                                <hs-input-check class="font-italic d-flex align-items-start justify-content-between" labelStyle="font-size: 12px;" beforeText="3. Khác" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.NguyenNhanTuVong" update="tempData.hsBenhAn.NguyenNhanTuVong" name="NguyenNhanTuVong" value="KHAC"></hs-input-check>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <hs-input-check class="font-italic d-flex align-items-start justify-content-between" labelStyle="font-size: 12px;" beforeText="1.Trong 24 h vào viện" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.ThoiGianTuVong" update="tempData.hsBenhAn.ThoiGianTuVong" name="ThoiGianTuVong" value="TRONG_24H"></hs-input-check>
+                            </div>
+                            <div class="col-4">
+                                <hs-input-check class="font-italic d-flex align-items-start justify-content-between" labelStyle="font-size: 12px;" beforeText="2.Trong 48 h vào viện" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.ThoiGianTuVong" update="tempData.hsBenhAn.ThoiGianTuVong" name="ThoiGianTuVong" value="TRONG_48H"></hs-input-check>
+                            </div>
+                            <div class="col-4">
+                                <hs-input-check class="font-italic d-flex align-items-start justify-content-between" labelStyle="font-size: 12px;" beforeText="3.Trong 72 h vào viện" size="md"
+                                  [selectedValue]="context.tempData.hsBenhAn.ThoiGianTuVong" update="tempData.hsBenhAn.ThoiGianTuVong" name="ThoiGianTuVong" value="TRONG_72H"></hs-input-check>
+                            </div>
+                        </div>
+                        <hs-icd-group label="29. Nguyên nhân chính tử vong:"
+                          [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdTuVong"
+                          [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdTuVongMa"
+                          [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdTuVongTen"
+                        update="tempData.hsBenhAn.BenhAnChiTietObj.IcdTuVong"></hs-icd-group>
+                        <hs-input-check class="d-flex align-items-start" beforeText="30. Khám nghiệm tử thi:"
+                          [selectedValue]="context.tempData.hsBenhAn.coKhamNghiemTuThi" update="tempData.hsBenhAn.coKhamNghiemTuThi" name="coKhamNghiemTuThi" [value]="true"></hs-input-check>
+                        <hs-icd-group label="31. Chẩn đoán giải phẫu tử thi:"
+                            [icd]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdKhamNghiemTuThi"
+                            [icdMa]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdKhamNghiemTuThiMa"
+                            [icdTen]="context.tempData.hsBenhAn.BenhAnChiTietObj.IcdKhamNghiemTuThiTen"
+                            update="tempData.hsBenhAn.BenhAnChiTietObj.IcdKhamNghiemTuThi"></hs-icd-group>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-6 offset-6">
+                    <hs-datepicker [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA" update="tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA"
+                      format="'Ngày' dd 'tháng' MM 'năm' yyyy" inputStyle="text-align: center"></hs-datepicker>
+                </div>
+                <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Giám đốc</div>
+                    <hs-signature
+                      signaturePositionCode="GiamDoc"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['GiamDoc']">
+                    </hs-signature>
+                </div>
+                <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Trưởng khoa</div>
+                    <hs-signature
+                      signaturePositionCode="TruongKhoa"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['TruongKhoa']">
+                    </hs-signature>
+                </div>
+            </div>
+            <div style="height: 30px;"></div>
+        </hoso-page>
+      
