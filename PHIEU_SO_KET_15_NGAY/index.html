@@ -1,0 +1,221 @@
+<hoso-page
+  style="font-size: 12pt; line-height: 20px; max-height: unset; height: auto"
+>
+  <div class="row no-gutters" style="line-height: normal">
+    <div class="col-8">
+      <div class="row no-gutters">
+        <div class="col-5">
+          <span
+            >Sở y tế:&nbsp;<hs
+              tag="b"
+              [text]="context.tempData.hsBenhAn.CoSoTrucThuoc"
+            ></hs
+          ></span>
+        </div>
+        <div
+          class="col-7 align-bottom font-weight-bold text-center input-ehr-xl font-size-20"
+        >
+          PHIẾU SƠ KẾT 15 NGÀY ĐIỀU TRỊ
+        </div>
+        <div class="col-11">
+          <div class="input-ehr">
+            <span
+              >BV:&nbsp;<hs
+                tag="b"
+                [text]="context.tempData.hsBenhAn.TenBenhVien"
+              ></hs
+            ></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="input-ehr">
+        <hs-textarea-line
+          label="MS:"
+          [readonly]="true"
+          [value]="context.tempData.hsBenhAn.MaSo"
+        ></hs-textarea-line>
+      </div>
+      <div class="input-ehr">
+        <hs-textarea-line
+          label="Số vào viện:"
+          [readonly]="true"
+          [value]="context.tempData.hsBenhAn.SoVaoVien"
+        ></hs-textarea-line>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="row no-gutters">
+      <div class="col-4">
+        <hs-textarea-line
+          label=" - Họ và tên:"
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+          update="tempData.hsBenhAn.BenhNhan.HoTen"
+        ></hs-textarea-line>
+      </div>
+      <div class="col-4">
+        <hs-textarea-line
+          label="Tuổi:"
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.Tuoi"
+          update="tempData.hsBenhAn.BenhNhan.Tuoi"
+        ></hs-textarea-line>
+      </div>
+      <div class="col-4">
+        <hs-textarea-line
+          label="Nam/Nữ: "
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+          update="tempData.hsBenhAn.BenhNhan.GioiTinh"
+        ></hs-textarea-line>
+      </div>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-12">
+        <hs-textarea-line
+          label=" - Địa chỉ: "
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.DiaChi"
+          update="tempData.hsBenhAn.BenhNhan.DiaChi"
+        ></hs-textarea-line>
+      </div>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-6">
+        <hs-textarea-line
+          label=" - Khoa: "
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.TenKhoa"
+          update="tempData.hsBenhAn.BenhNhan.TenKhoa"
+        ></hs-textarea-line>
+      </div>
+      <div class="col-6">
+        <hs-phong-giuong-picker
+          [soPhong]="context.tempData.hsBenhAn.SoPhong"
+          soPhongUpdate="tempData.hsBenhAn.SoPhong"
+          [soGiuong]="context.tempData.hsBenhAn.SoGiuong"
+          soGiuongUpdate="tempData.hsBenhAn.SoGiuong"
+        ></hs-phong-giuong-picker>
+      </div>
+      <div class="col-6">
+        <hs-textarea-line
+          label=" - Chuẩn đoán điều trị: "
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.ChuanDoanDieuTri"
+          update="tempData.hsBenhAn.BenhNhan.ChuanDoanDieuTri"
+        ></hs-textarea-line>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-12 font-weight-bold">
+      <hs-textarea-line
+        rows="5"
+        label="1.Diễn biến lâm sàng trong đợt điều trị:"
+        [value]="context.tempData.hsThongTinBenhAn.DienBienLamSang"
+        update="tempData.hsThongTinBenhAn.DienBienLamSang"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12 font-weight-bold">
+      <hs-textarea-line
+        rows="5"
+        label="2.Xét nghiệm cận lâm sàng:"
+        [value]="context.tempData.hsThongTinBenhAn.XetNghiemCLS"
+        update="tempData.hsThongTinBenhAn.XetNghiemCLS"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12 font-weight-bold">
+      <hs-textarea-line
+        rows="5"
+        label="3.Quá trình điều trị:"
+        [value]="context.tempData.hsThongTinBenhAn.QuaTrinhDieuTri"
+        update="tempData.hsThongTinBenhAn.QuaTrinhDieuTri"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12 font-weight-bold">
+      <hs-textarea-line
+        rows="5"
+        label="4. Đánh giá kết quả:"
+        [value]="context.tempData.hsThongTinBenhAn.DanhGiaKetQua"
+        update="tempData.hsThongTinBenhAn.DanhGiaKetQua"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12 font-weight-bold">
+      <hs-textarea-line
+        rows="5"
+        label="5. Hướng điều trị tiếp và tiên lượng:"
+        [value]="context.tempData.hsThongTinBenhAn.HuongDieuTri"
+        update="tempData.hsThongTinBenhAn.HuongDieuTri"
+      ></hs-textarea-line>
+    </div>
+  </div>
+
+<div class="row no-gutters">
+  <!-- Cột bên trái -->
+  <div class="col-6">
+    <hs-datepicker
+      [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA"
+      update="tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA"
+      format="'Ngày' dd 'tháng' MM 'năm' yyyy"
+      inputStyle="text-align: center"
+    ></hs-datepicker>
+    <div class="text-center font-weight-bold" style="font-size: 13.5pt">
+      Trưởng khoa
+    </div>
+    <hs-signature
+      signaturePositionCode="TruongKhoa"
+      [signatureHistory]="context.tempData.DSHSLichSuKySos['TruongKhoa']"
+    ></hs-signature>
+      <hs-textarea-line
+          label="Họ và tên:"
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+          update="tempData.hsBenhAn.BenhNhan.HoTen"
+        ></hs-textarea-line>
+  </div>
+
+  <!-- Cột bên phải -->
+  <div class="col-6">
+    <hs-datepicker
+      [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA"
+      update="tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA"
+      format="'Ngày' dd 'tháng' MM 'năm' yyyy"
+      inputStyle="text-align: center"
+    ></hs-datepicker>
+    <div class="text-center font-weight-bold" style="font-size: 13.5pt">
+      Bác sĩ điều trị
+    </div>
+    <hs-signature
+      signaturePositionCode="BacSiDieuTri"
+      [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSiDieuTri"]"
+    ></hs-signature>
+      <hs-textarea-line
+          label="Họ và tên:"
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+          update="tempData.hsBenhAn.BenhNhan.HoTen"
+        ></hs-textarea-line>
+  </div>
+</div>
+  <div class="col-12 ">
+    <strong>Hướng dẫn:</strong>
+    <div>- In khổ A4 dọc, 1 mặt.</div>
+    <div>- 15 ngày sơ kết một lần, dán vào bệnh án.</div>
+  </div>
+
+  <div style="height: 30px"></div>
+</hoso-page>
