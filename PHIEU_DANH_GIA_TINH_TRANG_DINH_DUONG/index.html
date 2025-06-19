@@ -44,7 +44,7 @@
                     update="tempData.hsBenhAn.BenhNhan.Tuoi"></hs-textarea-line>
             </div>
             <div class="col-4">
-                <hs-textarea-line label=" Nam/Nữ: " textareaStyle="font-weight: bold; text-transform: uppercase;"
+                <hs-textarea-line label=" Giới tính: " textareaStyle="font-weight: bold; text-transform: uppercase;"
                     [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
                     update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
             </div>
@@ -63,7 +63,7 @@
                     update="tempData.hsBenhAn.BenhNhan.CanNang"></hs-textarea-line>
             </div>
             <div class="col-3">
-                <hs-textarea-line label="Chiều Cao:" textareaStyle="font-weight: bold;"
+                <hs-textarea-line label="Chiều cao:" textareaStyle="font-weight: bold;"
                     [value]="context.tempData.hsBenhAn.BenhNhan.ChieuCao"
                     update="tempData.hsBenhAn.BenhNhan.ChieuCao"></hs-textarea-line>
             </div>
@@ -209,105 +209,187 @@
     <div class="table-container" style="font-size: 12pt">
         <!-- Hàng 1 -->
         <div class="table-row text-center">
-            <div class="table-cell" style="flex: 1 1 45%">
-                <div class="col-12 text-left">
-                    <span>BMI &gt; 20,5 kg/m2</span>
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12 text-center">
+                    <span>Chỉ số khối cơ thể ( BMI )</span>
                 </div>
             </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="co"
-                    update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"></hs-input-check>
-            </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="khong"
-                    update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"></hs-input-check>
-            </div>
-        </div>
-
-        <!-- Hàng 2 -->
-        <div class="table-row text-center">
-            <div class="table-cell" style="flex: 1 1 45%">
-                <div class="col-12 text-left">
-                    <span>Sụt cân trong 1 tháng qua</span>
-                </div>
-            </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.SutCan" value="co"
-                    update="tempData.hsBenhAn.SutCan" inputName="sutcan"></hs-input-check>
-            </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.SutCan" value="khong"
-                    update="tempData.hsBenhAn.SutCan" inputName="sutcan"></hs-input-check>
-            </div>
-        </div>
-
-        <!-- Hàng 3 -->
-        <div class="table-row text-center">
-            <div class="table-cell text-left" style="flex: 1 1 45%">
+            <div class="table-cell text-right" style="flex: 1 1 60%">
                 <div class="col-12">
-                    <span>Lượng ăn sụt giảm trong tuần qua</span>
+                    <span>&ge; 20,5 kg/m2</span>
                 </div>
-            </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="co"
-                    update="tempData.hsBenhAn.LuongAn" inputName="luongan"></hs-input-check>
-            </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="khong"
-                    update="tempData.hsBenhAn.LuongAn" inputName="luongan"></hs-input-check>
-            </div>
-        </div>
-
-        <!-- Hàng 4 -->
-        <div class="table-row text-center">
-            <div class="table-cell" style="flex: 1 1 45%">
-                <div class="col-12 text-left">
-                    <span>Bệnh nặng hạn chế đi lại</span>
-                </div>
-            </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNang" value="co"
-                    update="tempData.hsBenhAn.BenhNang" inputName="benhnang"></hs-input-check>
-            </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhNang" value="khong"
-                    update="tempData.hsBenhAn.BenhNang" inputName="benhnang"></hs-input-check>
-            </div>
-        </div>
-
-        <!-- Hàng 5 -->
-        <div class="table-row text-center">
-            <div class="table-cell text-left" style="flex: 1 1 45%">
                 <div class="col-12">
-                    <span><b>Kết luận: Nguy cơ suy dinh dưỡng</b> (Khi có ít nhất &ge; 1 yếu tố nguy cơ)</span>
+                    <span>15 - 20,4 kg/m2</span>
+                </div>
+                <div class="col-12">
+                    <span>&lt; 15,5 kg/m2</span>
                 </div>
             </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.KetLuan" value="co"
-                    update="tempData.hsBenhAn.KetLuan" inputName="ketluan"></hs-input-check>
+
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="khong"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'0 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="mot"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'1 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'2 điểm'"></hs-input-check>
+                </div>
+
+
             </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.KetLuan" value="khong"
-                    update="tempData.hsBenhAn.KetLuan" inputName="ketluan"></hs-input-check>
+        </div>
+        <!-- hàng 2 -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12 text-center">
+                    <span>Sụt cân</span>
+                </div>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 60%">
+                <div class="col-12">
+                    <span>Không sụt cân</span>
+                </div>
+                <div class="col-12">
+                    <span>5,9% - 9,9% trong 1 tháng qua</span>
+                </div>
+                <div class="col-12">
+                    <span>&ge; 10% trong 1 tháng qua</span>
+                </div>
+            </div>
+
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.SutCan" value="khong"
+                        update="tempData.hsBenhAn.SutCan" inputName="SutCan" [afterText]="'0 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.SutCan" value="mot"
+                        update="tempData.hsBenhAn.SutCan" inputName="SutCan" [afterText]="'1 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.SutCan" value="hai"
+                        update="tempData.hsBenhAn.SutCan" inputName="SutCan" [afterText]="'2 điểm'"></hs-input-check>
+                </div>
+
+
             </div>
         </div>
 
-        <!-- Hàng 6 -->
+        <!-- hàng Lượng ăn -->
         <div class="table-row text-center">
-            <div class="table-cell" style="flex: 1 1 45%">
-                <div class="col-12 text-left">
-                    <span><b>Chỉ định</b></span>
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12 text-center">
+                    <span>Lượng ăn</span>
                 </div>
             </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.ChiDinh" value="co"
-                    update="tempData.hsBenhAn.ChiDinh" inputName="chidinh"></hs-input-check>
+            <div class="table-cell text-right" style="flex: 1 1 60%">
+                <div class="col-12">
+                    <span>Không giảm hoặc được giảm nhẹ</span>
+                </div>
+                <div class="col-12">
+                    <span>Giảm &ge; 50% trong tuần qua</span>
+                </div>
+                <div class="col-12">
+                    <span>Giảm &ge; 75% trong tuần qua</span>
+                </div>
             </div>
-            <div class="table-cell" style="flex: 1 1 25%">
-                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.ChiDinh" value="khong"
-                    update="tempData.hsBenhAn.ChiDinh" inputName="chidinh"></hs-input-check>
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="khonggiam"
+                        update="tempData.hsBenhAn.LuongAn" inputName="LuongAn" [afterText]="'0 điểm'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="giam50"
+                        update="tempData.hsBenhAn.LuongAn" inputName="LuongAn" [afterText]="'1 điểm'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="giam75"
+                        update="tempData.hsBenhAn.LuongAn" inputName="LuongAn" [afterText]="'2 điểm'">
+                    </hs-input-check>
+                </div>
             </div>
         </div>
+
+        <!-- hàng Bệnh lý -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12 text-center">
+                    <span>Bệnh lý</span>
+                </div>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 60%">
+                <div class="col-12">
+                    <span>Bệnh nhẹ - trung bình</span>
+                </div>
+                <div class="col-12">
+                    <span>Bệnh nặng (phẫu thuật, TBMMN, nhiễm trùng nặng như ung thư,...)</span>
+                </div>
+                <div class="col-12">
+                    <span>Bệnh rất nặng (chấn thương nặng, chăm sóc tích cực...)</span>
+                </div>
+            </div>
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhLy" value="nhẹ"
+                        update="tempData.hsBenhAn.BenhLy" inputName="BenhLy" [afterText]="'0 điểm'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhLy" value="nặng"
+                        update="tempData.hsBenhAn.BenhLy" inputName="BenhLy" [afterText]="'1 điểm'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BenhLy" value="rất nặng"
+                        update="tempData.hsBenhAn.BenhLy" inputName="BenhLy" [afterText]="'2 điểm'">
+                    </hs-input-check>
+                </div>
+            </div>
+        </div>
+
+        <!-- hàng Kết luận -->
+        <div class="table-row text-center font-weight-bold">
+            <div class="table-cell " style="flex: 1 1 20%">
+                <div class="col-12 text-center">
+                    <span><b>Kết luận</b></span>
+                </div>
+            </div>
+
+            <div class="table-cell text-right" style="flex: 1 1 60%">
+                <div class="col-12">
+                    <span>&lt; 2 điểm</span>
+                </div>
+                <div class="col-12">
+                    <span>&ge; 2 điểm</span>
+                </div>
+            </div>
+
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.KetLuanSDD" value="khong"
+                        update="tempData.hsBenhAn.KetLuanSDD" inputName="KetLuanSDD" [afterText]="'Không SDD'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.KetLuanSDD" value="co"
+                        update="tempData.hsBenhAn.KetLuanSDD" inputName="KetLuanSDD" [afterText]="'Suy dinh dưỡng'">
+                    </hs-input-check>
+                </div>
+            </div>
+        </div>
+
+
+
 
 
 
@@ -323,7 +405,7 @@
             <div class="table-cell" style="flex: 1 1 30%">
                 <span>Chỉ định chế độ ăn</span>
             </div>
-            <div class="table-cell text-right" style="flex: 1 1 50%">
+            <div class="table-cell text-left" style="flex: 1 1 50%">
                 <div class="col-12">
                     <span>Mã số: BT01</span>
                 </div>
@@ -381,7 +463,7 @@
         </div>
 
         <!-- Hàng 4 -->
-        <div class="table-row text-center">
+        <div class="table-row text-center font-weight-bold">
             <div class="table-cell" style="flex: 1 1 30%">
                 <span>Tái đánh giá</span>
             </div>
