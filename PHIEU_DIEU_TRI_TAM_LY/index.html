@@ -1,0 +1,374 @@
+<hoso-page
+  style="font-size: 12pt; line-height: 20px; max-height: unset; height: auto"
+>
+  <div class="row no-gutters" style="line-height: normal">
+    <div class="col-6" style="line-height: 25px">
+      <div class="input-ehr" style="font-weight: bold">
+        <span>BỆNH VIỆN TÂM THẦN ĐÀ NẴNG</span>
+      </div>
+      <div class="input-ehr">
+        <span
+          >Khoa:&nbsp;<span style="font-weight: bold;">Khoa Tâm thần Trẻ em</span>
+        </span>
+      </div>
+      <div style="display: flex; align-items: center">
+        <div
+          style="border-top: 2px solid black; width: 50px; margin: 0 4px"
+        ></div>
+        <div style="font-size: 15pt; font-weight: bold">***</div>
+        <div
+          style="border-top: 2px solid black; width: 50px; margin: 0 4px"
+        ></div>
+      </div>
+    </div>
+    <div
+      class="col-4 align-bottom font-weight-bold text-center input-ehr-xl"
+      style="margin-top: 20px; font-size: 20px"
+    >
+      PHIẾU ĐIỀU TRỊ TÂM LÝ
+    </div>
+  </div>
+  <div style="margin:20px 0px; ">
+    <div class="row no-gutters" >
+      <div class="col-4">
+        <hs-textarea-line
+          label="Họ và tên:"
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+          update="tempData.hsBenhAn.BenhNhan.HoTen"
+        ></hs-textarea-line>
+      </div>
+      <div class="col-4">
+        <hs-textarea-line
+          label="Năm sinh:"
+          textareaStyle="font-weight: bold;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.NamSinh"
+          update="tempData.hsBenhAn.BenhNhan.NamSinh"
+        ></hs-textarea-line>
+      </div>
+      <div class="col-4">
+        <hs-textarea-line
+          label="Nam/Nữ: "
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+          update="tempData.hsBenhAn.BenhNhan.GioiTinh"
+        ></hs-textarea-line>
+      </div>
+    </div>
+  </div>
+  <div class="table-container" style="font-size: 14pt">
+    <!-- Hàng 1 -->
+    <div class="table-row text-center">
+      <div class="table-cell" style="flex: 1 1 50%">
+        <span>Đánh giá</span>
+      </div>
+      <div class="table-cell" style="flex: 1 1 50%">
+        <span>Hoạt động</span>
+      </div>
+    </div>
+    <!-- Hàng 2 -->
+    <div class="table-row">
+      <!-- cột 1 -->
+      <div class="table-cell" style="flex: 1 1 50%">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <hs-datepicker
+              label="Ngày:"
+              [value]="context.tempData.hsBenhAn.NgayVaoVien"
+              update="tempData.hsBenhAn.NgayVaoVien"
+              format="dd/MM/yyyy, HH 'giờ' mm 'phút' "
+            ></hs-datepicker>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12text-nowrap">Đánh giá trước điều trị:</div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="- Tình trạng sức khoẻ tâm thần:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.TinhTrangSucKhoe"
+              update="tempData.hsBenhAn.BenhNhan.TinhTrangSucKhoe"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="- Kết quả thực hiện bài tập:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.KQBT"
+              update="tempData.hsBenhAn.BenhNhan.KQBT"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="Nhận xét kết quả trong buổi điều trị:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.NhanXetKQ"
+              update="tempData.hsBenhAn.BenhNhan.NhanXetKQ"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="Cảm nhận của bệnh nhân:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.CamNhan"
+              update="tempData.hsBenhAn.BenhNhan.CamNhan"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+           
+                <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Nhà trị liệu</div>
+                    <hs-signature
+                      signaturePositionCode="GiamDoc"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['NhaTriLieu']">
+                    </hs-signature>
+                </div>
+                <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Bệnh nhân/Người nhà</div>
+                   
+                </div>
+
+        </div>
+    
+      </div>
+      <!-- cột 2 -->
+      <div class="table-cell" style="flex: 1 1 50%">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <hs-datepicker
+              label="Ngày:"
+              [value]="context.tempData.hsBenhAn.NgayVaoVien"
+              update="tempData.hsBenhAn.NgayVaoVien"
+              format="dd/MM/yyyy, HH 'giờ' mm 'phút' "
+            ></hs-datepicker>
+          </div>
+        </div>
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12text-nowrap">Cách hoạt động:</div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              [value]="context.tempData.hsBenhAn.BenhNhan.CachHoatDong"
+              update="tempData.hsBenhAn.BenhNhan.CachHoatDong"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-12">
+            <hs-datepicker
+              label="Kết thúc:"
+              [value]="context.tempData.hsBenhAn.NgayKetThuc"
+              update="tempData.hsBenhAn.NgayKetThuc"
+              format="dd/MM/yyyy, HH 'giờ' mm 'phút' "
+            ></hs-datepicker>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="2"
+              label="Kế hoạch tiếp theo:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.KeHoachTiepTheo"
+              update="tempData.hsBenhAn.BenhNhan.KeHoachTiepTheo"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+              <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="ĐIỂM CHÚ Ý:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.DiemChuY"
+              update="tempData.hsBenhAn.BenhNhan.DiemChuY"
+            ></hs-textarea-line>
+          </div>
+
+        </div>
+
+        <div class="row no-gutters">
+                 <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Nhà trị liệu</div>
+                    <hs-signature
+                      signaturePositionCode="GiamDoc"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['NhaTriLieu']">
+                    </hs-signature>
+                </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hàng 3 -->
+     <div class="table-row">
+      <!-- cột 1 -->
+      <div class="table-cell" style="flex: 1 1 50%">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <hs-datepicker
+              label="Ngày:"
+              [value]="context.tempData.hsBenhAn.NgayVaoVien"
+              update="tempData.hsBenhAn.NgayVaoVien"
+              format="dd/MM/yyyy, HH 'giờ' mm 'phút' "
+            ></hs-datepicker>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12text-nowrap">Đánh giá trước điều trị:</div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="- Tình trạng sức khoẻ tâm thần:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.TinhTrangSucKhoe"
+              update="tempData.hsBenhAn.BenhNhan.TinhTrangSucKhoe"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="- Kết quả thực hiện bài tập:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.KQBT"
+              update="tempData.hsBenhAn.BenhNhan.KQBT"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="Nhận xét kết quả trong buổi điều trị:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.NhanXetKQ"
+              update="tempData.hsBenhAn.BenhNhan.NhanXetKQ"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="Cảm nhận của bệnh nhân:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.CamNhan"
+              update="tempData.hsBenhAn.BenhNhan.CamNhan"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+           
+                <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Nhà trị liệu</div>
+                    <hs-signature
+                      signaturePositionCode="GiamDoc"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['NhaTriLieu']">
+                    </hs-signature>
+                </div>
+                <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Bệnh nhân/Người nhà</div>
+                   
+                </div>
+
+        </div>
+    
+      </div>
+      <!-- cột 2 -->
+      <div class="table-cell" style="flex: 1 1 50%">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <hs-datepicker
+              label="Ngày:"
+              [value]="context.tempData.hsBenhAn.NgayVaoVien"
+              update="tempData.hsBenhAn.NgayVaoVien"
+              format="dd/MM/yyyy, HH 'giờ' mm 'phút' "
+            ></hs-datepicker>
+          </div>
+        </div>
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12text-nowrap">Cách hoạt động:</div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              [value]="context.tempData.hsBenhAn.BenhNhan.CachHoatDong"
+              update="tempData.hsBenhAn.BenhNhan.CachHoatDong"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-12">
+            <hs-datepicker
+              label="Kết thúc:"
+              [value]="context.tempData.hsBenhAn.NgayKetThuc"
+              update="tempData.hsBenhAn.NgayKetThuc"
+              format="dd/MM/yyyy, HH 'giờ' mm 'phút' "
+            ></hs-datepicker>
+          </div>
+        </div>
+
+        <div class="row no-gutters" style="margin-top: 2px">
+          <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="2"
+              label="Kế hoạch tiếp theo:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.KeHoachTiepTheo"
+              update="tempData.hsBenhAn.BenhNhan.KeHoachTiepTheo"
+            ></hs-textarea-line>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+              <div class="col-12 text-nowrap">
+            <hs-textarea-line
+              rows="3"
+              label="ĐIỂM CHÚ Ý:"
+              [value]="context.tempData.hsBenhAn.BenhNhan.DiemChuY"
+              update="tempData.hsBenhAn.BenhNhan.DiemChuY"
+            ></hs-textarea-line>
+          </div>
+
+        </div>
+
+        <div class="row no-gutters">
+                 <div class="col-6">
+                    <div class="text-center font-weight-bold" style="font-size: 13.5pt">Nhà trị liệu</div>
+                    <hs-signature
+                      signaturePositionCode="GiamDoc"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['NhaTriLieu']">
+                    </hs-signature>
+                </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 30px"></div>
+</hoso-page>

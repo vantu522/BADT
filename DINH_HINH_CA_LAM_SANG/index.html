@@ -1,0 +1,274 @@
+<hoso-page
+  style="font-size: 12pt; line-height: 20px; max-height: unset; height: auto"
+>
+  <div class="row no-gutters" style="line-height: normal">
+    <div class="col-6" style="line-height: 25px">
+      <div class="input-ehr" style="font-weight: bold;">
+          <span>BỆNH VIỆN TÂM THẦN</span>
+      </div>
+      <div class="input-ehr">
+        <span
+          >Khoa:&nbsp;<hs
+            tag="b"
+            [text]="context.tempData.hsBenhAn.TenKhoaKham"
+          ></hs
+        ></span>
+      </div>
+      <div style="display: flex; align-items: center">
+        <div
+          style="border-top: 2px solid black; width: 50px; margin: 0 4px"
+        ></div>
+        <div style="font-size: 15pt; font-weight: bold">***</div>
+        <div
+          style="border-top: 2px solid black; width: 50px; margin: 0 4px"
+        ></div>
+      </div>
+    </div>
+    <div
+      class="col-4 align-bottom font-weight-bold text-center input-ehr-xl"
+      style="margin-top: 20px; font-size: 20px"
+    >
+      ĐỊNH HÌNH CA LÂM SÀNG
+    </div>
+  </div>
+  <div style="margin-top: 10px">
+    <div class="row no-gutters">
+      <div class="col-4">
+        <hs-textarea-line
+          label="Họ và tên:"
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+          update="tempData.hsBenhAn.BenhNhan.HoTen"
+        ></hs-textarea-line>
+      </div>
+      <div class="col-4">
+        <hs-textarea-line
+          label="Năm sinh:"
+          textareaStyle="font-weight: bold;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.NamSinh"
+          update="tempData.hsBenhAn.BenhNhan.NamSinh"
+        ></hs-textarea-line>
+      </div>
+      <div class="col-4">
+        <hs-textarea-line
+          label="Nam/Nữ: "
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+          update="tempData.hsBenhAn.BenhNhan.GioiTinh"
+        ></hs-textarea-line>
+      </div>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-12">
+        <hs-textarea-line
+          label="Địa chỉ: "
+          textareaStyle="font-weight: bold; text-transform: uppercase;"
+          [value]="context.tempData.hsBenhAn.BenhNhan.DiaChi"
+          update="tempData.hsBenhAn.BenhNhan.DiaChi"
+        ></hs-textarea-line>
+      </div>
+    </div>
+
+    <div class="row no-gutters">
+      <div class="col-12">
+        <hs-textarea-line
+          label="Lý do đến tư vấn: "
+          textareaStyle="font-weight: bold; "
+          [value]="context.tempData.hsBenhAn.BenhNhan.LyDo"
+          update="tempData.hsBenhAn.BenhNhan.LyDo"
+        ></hs-textarea-line>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>1. Tiến triển các vấn đề tâm lý:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.DienBienLamSang"
+        update="tempData.hsThongTinBenhAn.DienBienLamSang"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>2. Yếu tố nguyên nhân:</span>
+
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.YTNguyenNhan"
+        update="tempData.hsThongTinBenhAn.YTNguyenNhan"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>3. Yếu tố làm khởi đầu</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.YTKhoiDau"
+        update="tempData.hsThongTinBenhAn.YTKhoiDau"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>4. Yếu tố duy trì các vấn đề sức khoẻ tinh thần:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.YTTinhThan"
+        update="tempData.hsThongTinBenhAn.YTTinhThan"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>5. Yếu tố bảo vệ:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.YTBaoVe"
+        update="tempData.hsThongTinBenhAn.YTBaoVe"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>6.Yếu tố làm nặng vấn đề sức khoẻ tinh thần:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.YTLNTinhThan"
+        update="tempData.hsThongTinBenhAn.YTLNTinhThan"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>7. Kinh nghiệm giải quyết vấn đề:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.KNGiaiQuyetVanDe"
+        update="tempData.hsThongTinBenhAn.KNGiaiQuyetVanDe"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>8. Mong đợi:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.MongDoi"
+        update="tempData.hsThongTinBenhAn.MongDoi"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>9. Kết quả đánh giá:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.KQDanhGia"
+        update="tempData.hsThongTinBenhAn.KQDanhGia"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>10. Chuẩn đoán:</span>
+      <hs-textarea-line
+        rows="2"
+        [value]="context.tempData.hsThongTinBenhAn.KQDanhGia"
+        update="tempData.hsThongTinBenhAn.KQDanhGia"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-12">
+      <span>11. Kế hoạch điều trị:</span>
+    </div>
+  </div>
+
+  <div class="row no-gutters" style="padding-left: 12px">
+    <div class="col-12">
+      <hs-textarea-line
+        rows="2"
+        label="- Liệu pháp tâm lý:"
+        [value]="context.tempData.hsThongTinBenhAn.LieuPhapTamLy"
+        update="tempData.hsThongTinBenhAn.LieuPhapTamLy"
+      ></hs-textarea-line>
+    </div>
+    <div class="col-12">
+      <hs-textarea-line
+        rows="2"
+        label="- Các thành viên tham gia điều trị:"
+        [value]="context.tempData.hsThongTinBenhAn.LieuPhapTamLy"
+        update="tempData.hsThongTinBenhAn.LieuPhapTamLy"
+      ></hs-textarea-line>
+    </div>
+    <div class="col-12">
+      <hs-textarea-line
+        rows="2"
+        label="- Thời gian điều trị:"
+        [value]="context.tempData.hsThongTinBenhAn.LieuPhapTamLy"
+        update="tempData.hsThongTinBenhAn.LieuPhapTamLy"
+      ></hs-textarea-line>
+    </div>
+  </div>
+  <div class="row no-gutters">
+    <div class="col-6 offset-6">
+      <hs-datepicker
+        [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+        update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+        format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy"
+        inputStyle="text-align: center"
+      ></hs-datepicker>
+    </div>
+    <div class="col-6 offset-6">
+      <div class="text-center font-weight-bold" style="font-size: 13.5pt">
+        <b>Người thực hiện</b>
+      </div>
+      <hs-signature
+        signaturePositionCode="BacSiLamBenhAn"
+        [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSiLamBenhAn']"
+      >
+      </hs-signature>
+    </div>
+  </div>
+
+
+
+  <div style="height: 30px"></div>
+</hoso-page>
+<hoso-page style="font-size: 12pt; line-height: 20px; max-height: unset; height: auto">
+  <div class="col-12" >
+      <span style="font-weight: bold;">Phần bổ sung</span>
+      <hs-textarea-line
+        rows="2"
+        label="Ngày bổ sung:"
+        [value]="context.tempData.hsThongTinBenhAn.NgayBoSung"
+        update="tempData.hsThongTinBenhAn.NgayBoSung"
+      ></hs-textarea-line>
+      <hs-textarea-line
+        rows="2"
+        label="Nội dung bổ sung:"
+
+        [value]="context.tempData.hsThongTinBenhAn.NoiDungBoSung"
+        update="tempData.hsThongTinBenhAn.NoiDungBoSung"
+      ></hs-textarea-line>
+         <hs-textarea-line
+        rows="2"
+        label="Ngày bổ sung:"
+        [value]="context.tempData.hsThongTinBenhAn.NgayBoSung"
+        update="tempData.hsThongTinBenhAn.NgayBoSung"
+      ></hs-textarea-line>
+      <hs-textarea-line
+        rows="2"
+        label="Nội dung bổ sung:"
+
+        [value]="context.tempData.hsThongTinBenhAn.NoiDungBoSung"
+        update="tempData.hsThongTinBenhAn.NoiDungBoSung"
+      ></hs-textarea-line>
+     
+  </div>
+</hoso-page>

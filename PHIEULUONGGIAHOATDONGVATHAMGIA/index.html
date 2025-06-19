@@ -166,9 +166,12 @@
   </div>
   <div class="row no-gutters">
     <div class="col-12">
-      <span class="font-weight-bold">2. Sự tham gia các hoạt động trong gia đình và xã hội </span>
+      <span class="font-weight-bold"
+        >2. Sự tham gia các hoạt động trong gia đình và xã hội
+      </span>
       <span class="font-italic"
-        >(chuẩn bị bữa ăn sáng, công việc nội trợ, dọn dẹp nơi sinh hoạt/nấu ăn, đi chợ, mua sắm, tham gia hoạt động xã hội...)</span
+        >(chuẩn bị bữa ăn sáng, công việc nội trợ, dọn dẹp nơi sinh hoạt/nấu ăn,
+        đi chợ, mua sắm, tham gia hoạt động xã hội...)</span
       >
       <hs-textarea-line
         [value]="context.tempData.hsThongTinBenhAn.QuaTrinhBenhLy"
@@ -176,11 +179,14 @@
       ></hs-textarea-line>
     </div>
   </div>
-   <div class="row no-gutters">
+  <div class="row no-gutters">
     <div class="col-12">
       <span class="font-weight-bold">3. Yếu tố môi trường </span>
       <span class="font-italic"
-        >(Đánh giá tiếp cận môi trường của người khuyết tật/NB: tình trạng nơi sinh hoạt/điều trị, nhà vệ sinh, dụng cụ PHCN đang sử dụng; sự hỗ trợ và quan tâm của người xung quanh; thái độ và cách ứng xử của gia đình, xã hội...)</span
+        >(Đánh giá tiếp cận môi trường của người khuyết tật/NB: tình trạng nơi
+        sinh hoạt/điều trị, nhà vệ sinh, dụng cụ PHCN đang sử dụng; sự hỗ trợ và
+        quan tâm của người xung quanh; thái độ và cách ứng xử của gia đình, xã
+        hội...)</span
       >
       <hs-textarea-line
         [value]="context.tempData.hsThongTinBenhAn.QuaTrinhBenhLy"
@@ -188,11 +194,13 @@
       ></hs-textarea-line>
     </div>
   </div>
-   <div class="row no-gutters">
+  <div class="row no-gutters">
     <div class="col-12">
       <span class="font-weight-bold">4. Yếu tố cá nhân </span>
       <span class="font-italic"
-        >(Tình trạng hôn nhân, trình độ học vấn, tình trạng việc làm, thể lực, tâm lý, sở thích, lối sống, thói quen, kỹ năng xử lý tình huống, tính cách...)</span
+        >(Tình trạng hôn nhân, trình độ học vấn, tình trạng việc làm, thể lực,
+        tâm lý, sở thích, lối sống, thói quen, kỹ năng xử lý tình huống, tính
+        cách...)</span
       >
       <hs-textarea-line
         [value]="context.tempData.hsThongTinBenhAn.QuaTrinhBenhLy"
@@ -200,21 +208,26 @@
       ></hs-textarea-line>
     </div>
   </div>
- 
-    
 
-   <div class="row no-gutters">
-                <div class="col-6 offset-6">
-                    <hs-datepicker [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
-                      format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy" inputStyle="text-align: center"></hs-datepicker>
-                </div>
-                <div class="col-6 offset-6">
-                    <div class="text-center font-weight-bold" style="font-size: 13.5pt"><b>Người thực hiện</b></div>
-                    <hs-signature
-                      signaturePositionCode="BacSiLamBenhAn"
-                      [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSiLamBenhAn']">
-                    </hs-signature>
-                </div>
-            </div>
+  <div class="row no-gutters">
+    <div class="col-6 offset-6">
+      <hs-datepicker
+        [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+        update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+        format="HH 'giờ' mm 'phút, ngày' dd/MM/yyyy"
+        inputStyle="text-align: center"
+      ></hs-datepicker>
+    </div>
+    <div class="col-6 offset-6">
+      <div class="text-center font-weight-bold" style="font-size: 13.5pt">
+        <b>Người thực hiện</b>
+      </div>
+      <hs-signature
+        signaturePositionCode="BacSiLamBenhAn"
+        [signatureHistory]="context.tempData.DSHSLichSuKySos['BacSiLamBenhAn']"
+      >
+      </hs-signature>
+    </div>
+  </div>
   <div style="height: 30px"></div>
 </hoso-page>
