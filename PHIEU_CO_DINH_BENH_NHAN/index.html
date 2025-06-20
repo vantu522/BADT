@@ -1,0 +1,201 @@
+<hoso-page style="font-size: 12pt; line-height: 20px; max-height: unset; height: auto">
+    <div class="row no-gutters" style="line-height: normal">
+    <div class="col-6" style="line-height: 25px">
+        <div class="input-ehr">
+            <span>SỞ Y TẾ TP ĐÀ NẴNG</span>
+        </div>
+        <div class="input-ehr">
+            <span><b>BỆNH VIỆN TÂM THẦN ĐÀ NẴNG</b></span>
+        </div>
+        <div class="input-ehr">
+            <span>Khoa Cấp tính nam</span>
+        </div>
+    </div>
+
+    <div class="col-6 input-ehr-xl text-center" style="margin-top: 20px;">
+        <span class="font-weight-bold" style="font-size: 22px">PHIẾU CỐ ĐỊNH BỆNH NHÂN</span>
+        <div class="input-ehr d-flex justify-content-center" style="font-size: 16px;">
+            <span>( Tờ số....)</span>
+        </div>
+    </div>
+</div>
+
+
+    <div class="row no-gutters">
+        <div class="col-6"></div>
+    </div>
+
+
+    <div style="margin-top: 10px">
+        <div class="row no-gutters">
+            <div class="col-6">
+                <hs-textarea-line label="- Họ tên người bệnh:"
+                    textareaStyle="font-weight: bold; text-transform: cappitalize;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+            <div class="col-3">
+                <hs-textarea-line label="Tuổi:" textareaStyle="font-weight: bold;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.Tuoi"
+                    update="tempData.hsBenhAn.BenhNhan.Tuoi"></hs-textarea-line>
+            </div>
+            <div class="col-3">
+                <hs-textarea-line label="Giới tính: " textareaStyle="font-weight: bold; text-transform: cappitalize;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh"></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="input-ehr" style="font-size: 16px;">
+                    <hs-textarea-line label="- Số giường:" textareaStyle="font-weight: bold"
+                        [value]="context.tempData.hsBenhAn.SoGiuong"
+                        update="tempData.hsBenhAn.SoGiuong"></hs-textarea-line>
+                    <hs-textarea-line label="Buồng:" textareaStyle="font-weight: bold"
+                        [value]="context.tempData.hsBenhAn.SoPhong"
+                        update="tempData.hsBenhAn.SoPhong"></hs-textarea-line>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-textarea-line label="- Chuẩn đoán: " textareaStyle=" "
+                    [value]="context.tempData.hsBenhAn.BenhNhan.LyDo"
+                    update="tempData.hsBenhAn.BenhNhan.LyDo"></hs-textarea-line>
+            </div>
+        </div>
+
+
+        <div class="row no-gutters">
+            <div class="col-6">
+                <hs-datepicker [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                    label="- Ngày, giờ cố định:" update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                    format="HH ':' mm ' ' dd/MM/yyyy" inputStyle="text-align: center"></hs-datepicker>
+            </div>
+            <div class="col-6">
+                <hs-textarea-line label="Bác sĩ ra y lệnh cố định: " textareaStyle=" "
+                    [value]="context.tempData.hsBenhAn.BenhNhan."
+                    update="tempData.hsBenhAn.BenhNhan."></hs-textarea-line>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-6">
+                <hs-textarea-line label="- Lý do cố định: " textareaStyle=" "
+                    [value]="context.tempData.hsBenhAn.BenhNhan."
+                    update="tempData.hsBenhAn.BenhNhan."></hs-textarea-line>
+            </div>
+            <div class="col-6">
+                <hs-textarea-line label="Ký tên: " textareaStyle=" " [value]="context.tempData.hsBenhAn.BenhNhan."
+                    update="tempData.hsBenhAn.BenhNhan."></hs-textarea-line>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- tableee -->
+    <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+        <thead>
+            <tr>
+                <th rowspan="2"
+                    style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 80px; font-size: 11px;">
+                    Giờ ngày<br>tháng</th>
+                <th colspan="6" style="border: 1px solid #000; text-align: center; vertical-align: middle; ">Đánh giá
+                </th>
+                <th rowspan="2"
+                    style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 120px;">Can thiệp
+                </th>
+                <th rowspan="2"
+                    style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 100px;">Điều
+                    dưỡng</th>
+            </tr>
+            <tr>
+                <th style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 60px;">Mạch</th>
+                <th style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 60px;">Huyết áp
+                </th>
+                <th style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 60px;">Nhiệt</th>
+                <th style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 60px;">Nhịp thở
+                </th>
+                <th style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 60px;">Nước tiểu
+                </th>
+                <th style="border: 1px solid #000; text-align: center; vertical-align: middle;  width: 60px;">Chế độ ăn
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle; font-size: 11px;">
+                    <hs-datepicker [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                        update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                        format="HH ':' mm,  dd/MM/yyyy" inputStyle="text-align: center"></hs-datepicker>
+                </td>
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle;"><hs-textarea-line
+                        [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                        update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line></td>
+                <td
+                    style="border: 1px solid #000; text-align: center; vertical-align: middle; font-size: 16px; font-weight: bold;">
+                    <div style="display: flex; justify-content: center; align-items: center; gap: 4px;">
+                        <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1">
+                        </hs-textarea-line>
+                        /
+                        <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2">
+                        </hs-textarea-line>
+                    </div>
+                </td>
+
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle;">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                        update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line>
+                </td>
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle;">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                        update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line>
+                </td>
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle;">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                        update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line>
+                </td>
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle;">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                        update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line>
+                </td>
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle;">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                        update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line>
+                </td>
+                <td style="border: 1px solid #000; text-align: center; vertical-align: middle;">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"
+                        update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri1"></hs-textarea-line>
+                </td>
+            </tr>
+
+
+
+
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div style="height: 30px"></div>
+</hoso-page>
