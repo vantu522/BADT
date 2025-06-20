@@ -1647,6 +1647,79 @@
                 </div>
             </div>
 
+            <!-- hàng 17 -->
+            <div class="table-row" style="font-size: 12px;">
+                <div class="table-cell" style="flex: 1 1 100%">
+                     <div class="row no-gutters">
+                        <div class="col-4 font-weight-bold">
+                            <span>6. Đối với phụ nữ, có phải tử vong khi mang thai?:</span>
+                        </div>
+                        <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                        </div>
+                        <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không'"></hs-input-check>
+                        </div>
+                         <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không biết'"></hs-input-check>
+                        </div>
+                     
+                    </div>
+                    <div class="row no-gutters" >
+                        <div class="col-6" style="padding-left: 50px;">
+                                     <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Tại thời điểm tử vong'"></hs-input-check>
+                        </div>
+                         <div class="col-6">
+                                     <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Trong vòng 42 ngày trước khi tử vong'"></hs-input-check>
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters" >
+                        <div class="col-6" style="padding-left: 50px;">
+                                     <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Từ ngày thứ 43 đến 1 năm trước khi tử vong'"></hs-input-check>
+                        </div>
+                         <div class="col-6">
+                                     <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không biết'"></hs-input-check>
+                        </div>
+                    </div>
+
+                     <div class="row no-gutters">
+                        <div class="col-4 ">
+                            <span>Việc mang thai có góp phần gây tử vong không ?:</span>
+                        </div>
+                        <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                        </div>
+                        <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không'"></hs-input-check>
+                        </div>
+                         <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không biết'"></hs-input-check>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
 
 
               <!-- hàng 18 -->
@@ -1703,5 +1776,33 @@
 
 
         </div>
+        <div class="row no-gutters">
+                <div class="col-6 offset-6">
+                    <hs-datepicker [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA" update="tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA"
+                      format="'Ngày' dd 'tháng' MM 'năm' yyyy" inputStyle="text-align: center"></hs-datepicker>
+                </div>
+                <div class="col-4">
+                    <div class="text-center font-weight-bold">Bác sĩ điều dưỡng</div>
+                    <hs-signature
+                      signaturePositionCode="DieuDuong"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['DieuDuong']">
+                    </hs-signature>
+                </div>
+                <div class="col-4">
+                    <div class="text-center font-weight-bold">Trưởng khoa điều trị</div>
+                    <hs-signature
+                      signaturePositionCode="TKDT"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['TKDT']">
+                    </hs-signature>
+                </div>
+                <div class="col-4">
+                    <div class="text-center font-weight-bold">Thủ trưởng đơn vị</div>
+                    <hs-signature
+                      signaturePositionCode="ThuTruong"
+                      [signatureHistory]="context.tempData.DSHSLichSuKySos['ThuTruong']">
+                    </hs-signature>
+                </div>
+            
+            </div>
 
         </hoso-page>
