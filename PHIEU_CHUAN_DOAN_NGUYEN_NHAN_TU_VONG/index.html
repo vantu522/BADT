@@ -1,0 +1,1707 @@
+        <hoso-page
+        style="font-size: 12pt; line-height: 20px; max-height: unset; height: auto"
+        >
+        <div class="row no-gutters" style="line-height: normal">
+            <div class="col-6">
+            <span>Tên cơ sở KCB: </span>
+            <hs-input-wrapper [value]="context.email" update="email">
+                <input type="text" />
+            </hs-input-wrapper>
+            </div>
+            <div class="col-6">
+            <span>Khoa phòng: </span>
+            <hs-input-wrapper [value]="context.email" update="email">
+                <input type="text" />
+            </hs-input-wrapper>
+            </div>
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12 text-center" style="font-size: 30;" >
+                <span><b>PHỤ LỤC 3. PHIẾU CHẨN ĐOÁN NGUYÊN NHÂN TỬ VONG</b></span>
+            </div>
+        </div>
+
+            <div class="table-container" >
+            <!-- Hàng 1 -->
+            <div class="table-row text-left font-weight-bold">
+            <div class="table-cell" style="flex: 1 1 50%">
+                <span>I. THÔNG TIN CA BỆNH</span>
+            </div>
+            
+            </div>
+            <!-- Hàng 2 -->
+            <div class="table-row font-weight-bold" style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 8%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>1. Bệnh án* </span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 9%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>2. Mã HSBA </span>
+                </div>
+                </div>
+
+                
+            
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 18%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>3. Số định danh cá nhân* </span>
+                </div>
+                </div>
+
+                
+            
+            </div>
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 7 -->
+            <div class="table-cell" style="flex: 1 1 6%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>4. Loại* </span>
+                </div>
+                </div>
+
+                
+            
+            </div>
+            <!-- cột 8-->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            
+
+            </div>
+
+            <!-- hàng 3 -->
+            <div class="table-row" style="font-size: 12px;">
+                <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 12%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>6. Số thẻ BHYT* </span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+            <!-- cột 3 -->    
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <span>6.1 Giá trị từ</span>
+                </div>
+                </div>
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 25%">
+                <div class="row no-gutters">
+                <div class="col-12 d-flex align-items-center">
+        <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+        
+        <span class="mx-2">đến</span>
+        
+        <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+        </div>
+
+                </div>
+            </div>
+            <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 16%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>6.2 Nơi đăng ký ban đầu</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- HÀNG 4 -->
+            <div class="table-row" style="font-size: 12px;">
+                <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 22%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>6.3 Thời điểm đủ 05 năm liên tục từ ngày</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+                </div>
+                </div>
+            </div>
+            <!-- cột 3 -->    
+            <div class="table-cell" style="flex: 1 1 20%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <span>6.4 Miễn cùng chi trả trong năm từ ngày</span>
+                </div>
+                </div>
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 8%">
+                <div class="row no-gutters">
+                <div class="col-12 ">
+                    <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+        </div>
+
+                </div>
+            </div>
+        
+
+            </div>
+
+            <!-- HÀNG 5 -->
+            <div class="table-row " style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 7%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>8. Họ tên</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 9%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>9. Ngày sinh </span>
+                </div>
+                </div>
+
+                
+            
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 8%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>10. Tuổi</span>
+                </div>
+                </div>
+
+                
+            
+            </div>
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+            <hs-textarea-line  
+                            [value]="context.tempData.hsBenhAn.BenhNhan.Tuoi"
+                            update="tempData.hsBenhAn.BenhNhan.Tuoi"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 7 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>11. Giới tính*</span>
+                </div>
+                </div>
+
+                
+            
+            </div>
+            <!-- cột 8-->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                            <hs-textarea-line 
+                            [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                            update="tempData.hsBenhAn.BenhNhan.GioiTinh"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            
+
+            </div>
+
+            <!-- HÀNG 6 -->
+            <div class="table-row " style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>12. Nghề nghiệp</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NgheNghiep" update="tempData.hsTongKetBenhAn.NgheNghiep"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 7%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>13. Dân tộc</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NgheNghiep" update="tempData.hsTongKetBenhAn.NgheNghiep"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+
+
+            <!-- cột 5-->
+            <div class="table-cell" style="flex: 1 1 7%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>14. Tôn giáo</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NgheNghiep" update="tempData.hsTongKetBenhAn.NgheNghiep"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+
+            
+            <!-- cột 7-->
+            <div class="table-cell" style="flex: 1 1 7%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>15. Quốc tịch</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 8 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.NgheNghiep" update="tempData.hsTongKetBenhAn.NgheNghiep"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+
+
+            
+
+            
+
+            </div>
+
+            <!-- HÀNG 7 -->
+            <div class="table-row " style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 18%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>16. Địa chỉ nơi ở hiện tại*:  Tỉnh</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 5%">
+                    <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <span>Huyện</span>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12 text-center">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 3%">
+                    <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <span>Xã</span>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+            </div>
+
+            <!-- HÀNG 8  -->
+            <div class="table-row " style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 18%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>17. Địa chỉ thường trú*:  Tỉnh</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 5%">
+                    <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <span>Huyện</span>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12 text-center">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 3%">
+                    <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <span>Xã</span>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+            </div>
+
+            <!-- HÀNG 9  -->
+            <div class="table-row " style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 18%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>18. Nơi ghi nhận ca bệnh*:  Tỉnh</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 5%">
+                    <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <span>Huyện</span>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12 text-center">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 3%">
+                    <div class="row no-gutters">
+                    <div class="col-12 text-center">
+                        <span>Xã</span>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+                
+            </div>
+            </div>
+
+            <!-- HÀNG 10 -->
+            <div class="table-row" style="font-size: 12px;">
+                <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>19. Ngày vào viện*</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+                </div>
+                </div>
+            </div>
+                <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>20. Ngày vào khoa</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+                </div>
+                </div>
+            </div>
+                <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 12%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>21. Số ngày vắng mặt</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 5%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                    
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- HÀNG 11 -->
+            <div class="table-row" style="font-size: 12px;">
+                <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 8%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>22. Loại vào viện</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 25%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+                <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 8%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>23. Chuyển từ:</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 30%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+
+
+            </div>
+
+            <!-- HÀNG 12 -->
+            <div class="table-row" style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>24. Ngày ra viện/TV*</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <hs-datepicker 
+            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+            format=" dd/MM/yyyy" inputStyle="text-align: center">
+        </hs-datepicker>
+                </div>
+                </div>
+            </div>
+                <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>25. Tình trạng ra viện</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+                <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>26. Kết quả điều trị</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+
+
+            </div>
+
+            <!-- HÀNG 13 -->
+            <div class="table-row" style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>27. Số ngày nằm ICU</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+                <!-- cột 3 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>28. Cân nặng trẻ &lt; 1 tuổi (gr)</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 4 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+                <!-- cột 5 -->
+            <div class="table-cell" style="flex: 1 1 10%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>29. Chuyển đến</span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 6 -->
+            <div class="table-cell" style="flex: 1 1 15%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+
+
+            </div>
+
+            <!-- HÀNG 14 -->
+            <div class="table-row" style="font-size: 12px;">
+            <!-- cột 1 -->
+            <div class="table-cell font-weight-bold" style="flex: 1 1 20%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <span>30. Chuẩn đoán khi ra viện/TV*: </span>
+                </div>
+                </div>
+
+            </div>
+            <!-- cột 2 -->
+            <div class="table-cell" style="flex: 1 1 70%">
+                <div class="row no-gutters">
+                <div class="col-12">
+                    <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                </div>
+                </div>
+            </div>
+        
+            </div>
+
+        
+
+
+
+        </div>
+
+        <div class="table-container " style="margin-top: 5px;" >
+            <!-- Hàng 1 -->
+            <div class="table-row text-left font-weight-bold">
+            <div class="table-cell" style="flex: 1 1 50%">
+                <span>II. NGUYÊN NHÂN TỬ VONG</span>
+            </div>
+            
+            </div>
+
+            <!-- hàng 2 -->
+            <div class="table-row" style="font-size: 12px;">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <span>Tử vong tại:</span>
+                    </div>
+                </div>
+                <div class="row no-gutters"  style="padding: 0px 40px;">
+                
+                    <div class="col-12">
+                            <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                                update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                                [afterText]="'Cơ sở khám chữa bệnh'"></hs-input-check>
+                        </div>
+                </div>
+                <div class="row no-gutters"  style="padding: 0px 40px;">
+                
+                    <div class="col-12">
+                            <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                                update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                                [afterText]="'Tiên lượng nặng xin về'"></hs-input-check>
+                        </div>
+                </div>
+                <div class="row no-gutters" style="padding: 0px 40px;">
+                
+                    <div class="col-12">
+                            <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                                update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                                [afterText]="'Trên đường đến cơ sở KCB'"></hs-input-check>
+                        </div>
+                </div>
+                <div class="row no-gutters" >
+                
+                    <div class="col-12" >
+                        <span style="font-size: 16px;"><b>Phần A: Thông tin y tế</b></span>
+                        </div>
+                </div>
+            </div>
+
+            <!-- hàng 3 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                    <div class="table-cell" style="flex: 1 1 50%">
+                        <div class="col-12">
+                            <span>Mục 1. Nguyên nhân tử vong (chuỗi sự kiện dẫn đến tử vong)</span>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <span>Mã ICD</span>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <span>Thời gian</span>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <span>Đơn vị tính</span>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 4 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                <div class="table-cell" style="flex: 0 0 5%">
+                        <div class="col-12">
+                            <span>a,</span>
+                        </div>
+                    </div>
+                
+                    <div class="table-cell" style="flex: 1 1 45%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>  
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 5 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                <div class="table-cell" style="flex: 0 0 5%">
+                        <div class="col-12">
+                            <span>b,</span>
+                        </div>
+                    </div>
+                
+                    <div class="table-cell" style="flex: 1 1 45%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>  
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 6 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                <div class="table-cell" style="flex: 0 0 5%">
+                        <div class="col-12">
+                            <span>c,</span>
+                        </div>
+                    </div>
+                
+                    <div class="table-cell" style="flex: 1 1 45%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>  
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 4 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                <div class="table-cell" style="flex: 0 0 5%">
+                        <div class="col-12">
+                            <span>d,</span>
+                        </div>
+                    </div>
+                
+                    <div class="table-cell" style="flex: 1 1 45%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>  
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 5 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                <div class="table-cell" style="flex: 0 0 5%">
+                        <div class="col-12">
+                            <span>[+]</span>
+                        </div>
+                    </div>
+                
+                    <div class="table-cell" style="flex: 1 1 45%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>  
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 6 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                    <div class="table-cell" style="flex: 1 1 50%">
+                        <div class="col-12">
+                            <span>Mục 2. Bệnh lý, nguy cơ quan trọng khác góp phần vào TV</span>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <span>Mã ICD</span>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <span>Thời gian</span>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <span>Đơn vị tính</span>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 7 -->
+            <div class="table-row" style="font-size: 14px; font-weight: bold;">
+                <div class="table-cell" style="flex: 0 0 5%">
+                        <div class="col-12">
+                            <span>[+]</span>
+                        </div>
+                    </div>
+                
+                    <div class="table-cell" style="flex: 1 1 45%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>  
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                        <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 8 -->
+            <div class="table-row text-left font-weight-bold">
+                <div class="table-cell" style="flex: 1 1 50%">
+                    <span>Phần B: Thông tin tử vong khác</span>
+                </div>
+            
+            </div>
+
+            <!-- hàng 9 -->
+            <div class="table-row  " style="font-size: 12px;">
+                <div class="table-cell" style="flex: 1 1 20%">
+                    <span>Có phẫu thuật trong vòng 4 tuần:</span>
+                </div>
+
+                <div class="table-cell" style="flex: 1 1 40%">
+                        <div class="row no-gutters">
+                            <div class="col-3">
+                                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                            </div>
+                            <div class="col-3">
+                                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không'"></hs-input-check>
+                            </div>
+                            <div class="col-3">
+                                <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không biết'"></hs-input-check>
+                            </div>
+                        
+                        </div>
+                        
+                </div>
+
+                <div class="table-cell" style="flex: 1 1 15%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                        <span>Ngày phẫu thuật:</span>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-cell" style="flex: 1 1 15%">
+                        <hs-datepicker 
+                            [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                            format=" dd/MM/yyyy" inputStyle="text-align: center">
+                        </hs-datepicker>
+                </div>
+
+
+            
+            </div>
+
+            <!-- hàng 10 -->
+            <div class="table-row  " style="font-size: 12px;">
+                <div class="table-cell" style="flex: 1 1 30%">
+                    <span>Lý do phẫu thuật:</span>
+                </div>
+
+                
+
+                <div class="table-cell" style="flex: 1 1 70%">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <hs-textarea-line [value]="context.tempData.hsTongKetBenhAn.TinhTrangRaVien" update="tempData.hsTongKetBenhAn.TinhTrangRaVien"></hs-textarea-line>
+                            
+                        </div>
+                    </div>
+                </div>
+
+        
+
+
+            
+            </div>
+
+            <!-- hàng 11 -->
+            <div class="table-row" style="font-size: 12px;">
+                
+                <div class="table-cell" style="flex: 1 1 100%">
+                    <div class="row no-gutters">
+                    <div class="col-6">
+                        <span>Có trưng cầu giám định pháp y không ?:</span>
+                    </div>
+                    <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                    </div>
+                    <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                    </div>
+                    <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không biết'"></hs-input-check>
+                    </div>
+
+                    </div>
+                    <div class="row no-gutters">
+                    <div class="col-6">
+                        <span>
+                    Nếu có, đã sử dụng kết quả để cập nhật chẩn đoán NNTV chưa ?:	
+
+                        </span>
+                    </div>
+                    <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                    </div>
+                    <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                    </div>
+                    <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không biết'"></hs-input-check>
+                    </div>
+
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-12" style="font-weight: bold;">
+                            <span>3. Hình thức tử vong</span>
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters" style="padding-left: 60px;">
+                        <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Bệnh tật'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Bị tấn công, đánh nhau'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không thể xác định'"></hs-input-check>
+                    </div>
+                    </div>
+
+                    <div class="row no-gutters" style="padding-left: 60px;">
+                        <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Tai nạn'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Can thiệp pháp lý'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Chờ điều tra'"></hs-input-check>
+                    </div>
+                    </div>
+
+                    <div class="row no-gutters" style="padding-left: 60px;">
+                        <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Cố tình tự hại (tự tử)'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Chiến tranh'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không biết'"></hs-input-check>
+                    </div>
+                    </div>
+
+                    <div class="row no-gutters">
+                        <div class="col-12" style="font-weight: bold;">
+                            <span>4a. Nguyên nhân bên ngoài (tai nạn, ngộ độc, đánh nhau, đuối nước ...):</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            
+            </div> 
+    
+            <!-- hàng 12 -->
+            <div class="table-row" style="font-size: 12px;">
+                    <div class="table-cell" style="flex: 1 1 25%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                Tên nguyên nhân bên ngoài, độc chất
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 20%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                Mô tả xảy ra như thế nào
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                Mã ICD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 20%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                Tên theo ICD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 20%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                Ngày xảy ra
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 13 -->
+            <div class="table-row" style="font-size: 12px;">
+                    <div class="table-cell" style="flex: 1 1 25%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                            <hs-textarea-line  textareaStyle="font-weight: bold; text-transform: cappitalize;"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                        update="tempData.hsBenhAn.BenhNhan.GioiTinh"></hs-textarea-line>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 20%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <hs-textarea-line  textareaStyle="font-weight: bold; text-transform: cappitalize;"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                        update="tempData.hsBenhAn.BenhNhan.GioiTinh"></hs-textarea-line>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 15%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <hs-textarea-line  textareaStyle="font-weight: bold; text-transform: cappitalize;"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                        update="tempData.hsBenhAn.BenhNhan.GioiTinh"></hs-textarea-line>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 20%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <hs-textarea-line  textareaStyle="font-weight: bold; text-transform: cappitalize;"
+                        [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                        update="tempData.hsBenhAn.BenhNhan.GioiTinh"></hs-textarea-line>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-cell" style="flex: 1 1 20%">
+                        <div class="row no-gutters">
+                            <div class="col-12">
+                                <hs-datepicker [value]="context.tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                            update="tempData.hsThongTinBenhAn.NoiDungChiTietObj.NgayLamBenhAn"
+                            format="dd/MM/yyyy" inputStyle="text-align: center"></hs-datepicker>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- hàng 14 -->
+            <div class="table-row" style="font-size: 12px;">
+                <div class="table-cell" style="flex: 1 1 100%">
+                    <div class="row no-gutters">
+                        <div class="col-12 font-weight-bold">
+                            <span>4b. Nơi xảy ra nguyên nhân bên ngoài (tai nạn, ngộ độc, đánh nhau, đuối nước ...):</span>
+                        </div>
+                    </div>
+                
+                    <div class="row no-gutters" style="padding-left: 20px;">
+                        <div class="col-3">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Tại nhà'"></hs-input-check>
+                    </div>
+                    <div class="col-2">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Khu dân cư'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Trường học, khu hành chính khác'"></hs-input-check>
+                    </div>
+                      <div class="col-3">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Khu thể thao, luyện tập'"></hs-input-check>
+                    </div>
+                    </div>
+
+                    <div class="row no-gutters" style="padding-left: 20px;font-style: italic;">
+                        <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Trên đường đi'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Khu thường mại, dịch vụ'"></hs-input-check>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Khu công nghiệp hoặc công trường xây dựng'"></hs-input-check>
+                    </div>
+                   
+                    </div>
+
+                    <div class="row no-gutters" style="padding-left: 20px;font-style: italic;">
+                        <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Nông trại'"></hs-input-check>
+                        </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Khác, ghi rõ'"></hs-input-check>
+                        <hs-input-wrapper [value]="context.email" update="email">
+                            <input type="text" />
+                        </hs-input-wrapper>
+                    </div>
+                    <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'KKhông biết'"></hs-input-check>
+                    </div>
+                   
+                    </div>
+
+                    <div class="row no-gutters">
+                        <div class="col-4 font-weight-bold">
+                            <span>5. Tử vong thai nhi hoặc trẻ sơ sinh:</span>
+                        </div>
+                        <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                        </div>
+                        <div class="col-4">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Không'"></hs-input-check>
+                        </div>
+                    </div>
+
+                    <div class="row no-gutters" style="padding-left: 20px;font-style: italic;">
+                        <div class="col-3">
+                            <span>Đa thai: </span>
+                        </div>
+                        <div class="col-3">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                        </div>
+                        <div class="col-3">
+                            <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                                update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                                [afterText]="'Không'"></hs-input-check>
+                        </div>
+                        <div class="col-3">
+                            <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                                update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                                [afterText]="'Không biết'"></hs-input-check>
+                        </div>
+                   
+                    </div>
+
+                    
+                    <div class="row no-gutters" style="padding-left: 20px;font-style: italic;">
+                        <div class="col-3">
+                            <span>Sinh non: </span>
+                        </div>
+                        <div class="col-3">
+                        <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                            update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                            [afterText]="'Có'"></hs-input-check>
+                        </div>
+                        <div class="col-3">
+                            <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                                update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                                [afterText]="'Không'"></hs-input-check>
+                        </div>
+                        <div class="col-3">
+                            <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                                update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                                [afterText]="'Không biết'"></hs-input-check>
+                        </div>
+                   
+                    </div>
+
+                      <div class="row no-gutters" style="padding-left: 20px;font-style: italic;">
+                        <div class="col-4">
+                        <span>
+                            Nếu TV trong vòng 24h, ghi rõ số giờ sống:
+                        </span>
+                        </div>
+                        <div class="col-3">
+                        
+                            <hs-input-wrapper [value]="context.email" update="email">
+                                <input type="text" />
+                            </hs-input-wrapper>
+                        </div>
+                        <div class="col-3">
+                            <span>
+                                Cân nặng trẻ khi sinh (gram):
+                            </span>
+                        </div>
+                        <div class="col-1">
+                            <hs-input-wrapper [value]="context.email" update="email" >
+                                <input type="text" style="width: 80px;" />
+                            </hs-input-wrapper>
+
+                        </div>
+                   
+                    </div>
+
+                    <div class="row no-gutters" style="padding-left: 20px;font-style: italic;">
+                        <div class="col-4">
+                        <span>
+                            Tuổi thai (tuần):
+                        </span>
+                        </div>
+                        <div class="col-3">
+                        
+                            <hs-input-wrapper [value]="context.email" update="email">
+                                <input type="text" />
+                            </hs-input-wrapper>
+                        </div>
+                        <div class="col-3">
+                            <span>
+                                Tuổi của mẹ (năm):
+                            </span>
+                        </div>
+                        <div class="col-1">
+                            <hs-input-wrapper [value]="context.email" update="email" >
+                                <input type="text" style="width: 80px;" />
+                            </hs-input-wrapper>
+
+                        </div>
+                   
+                    </div>
+
+
+                    
+                </div>
+                
+            </div>
+
+            <!-- hàng 15 -->
+            <div class="table-row" style="font-size: 12px; font-weight: bold;">
+                <div class="table-cell" style="flex: 1 1 50%" >
+                    <div class="row no-gutters">
+                        <span>Bệnh lý mẹ ảnh hưởng đến thai nhi hoặc trẻ sơ sinh</span>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 20%" >
+                    <div class="row no-gutters">
+                        <span>Mã ICD</span>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 30%" >
+                    <div class="row no-gutters">
+                        <span>Tên theo ICD</span>
+                    </div>
+                </div>
+            </div>
+            <!-- hàng 16 -->
+                    <div class="table-row" style="font-size: 12px; font-weight: bold;">
+                <div class="table-cell" style="flex: 1 1 50%" >
+                    <div class="row no-gutters">
+                                <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2">
+                        </hs-textarea-line>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 20%" >
+                    <div class="row no-gutters">
+                            <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2">
+                        </hs-textarea-line>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 30%" >
+                    <div class="row no-gutters">
+                            <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2">
+                        </hs-textarea-line>
+                    </div>
+                </div>
+            </div>
+
+
+
+              <!-- hàng 18 -->
+            <div class="table-row" style="font-size: 12px; font-weight: bold;">
+                <div class="table-cell" style="flex: 1 1 50%" >
+                    <div class="row no-gutters">
+                        <span>Kết luận Nguyên nhân tử vong chính*:</span>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 20%" >
+                    <div class="row no-gutters">
+                        <span>Mã ICD</span>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 30%" >
+                    <div class="row no-gutters">
+                        <span>Tên theo ICD</span>
+                    </div>
+                </div>
+            </div>
+            <!-- hàng 19 -->
+                    <div class="table-row" style="font-size: 12px; font-weight: bold;">
+                <div class="table-cell" style="flex: 1 1 50%" >
+                    <div class="row no-gutters">
+                                <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2">
+                        </hs-textarea-line>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 20%" >
+                    <div class="row no-gutters">
+                            <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2">
+                        </hs-textarea-line>
+                    </div>
+                </div>
+                <div class="table-cell" style="flex: 1 1 30%" >
+                    <div class="row no-gutters">
+                            <hs-textarea-line
+                            [value]="context.tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2"
+                            update="tempData.hsTongKetBenhAn.NoiDungChiTietObj.PhuongPhapDieuTri2">
+                        </hs-textarea-line>
+                    </div>
+                </div>
+            </div>
+
+
+            
+
+        
+
+
+
+        </div>
+
+        </hoso-page>
