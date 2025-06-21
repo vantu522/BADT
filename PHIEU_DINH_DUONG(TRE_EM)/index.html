@@ -1,0 +1,514 @@
+<hoso-page style="font-size: 12pt; line-height: 20px; max-height: unset; height: auto; font-weight: 300;">
+    <div class="row no-gutters" style="line-height: normal">
+        <div class="col-6" style="line-height: 25px">
+            <div class="input-ehr" style="font-weight: bold">
+                <span>SỞ Y TẾ TP ĐÀ NẴNG</span>
+            </div>
+            <div class="input-ehr">
+                <span style="font-weight: bold">BỆNH VIỆN TÂM THẦN ĐÀ NẴNG</span>
+            </div>
+        </div>
+        <div class="col-6 align-bottom text-center input-ehr-xl" style="font-size: 16px">
+            <span class="font-weight-bold">
+                PHIẾU ĐÁNH GIÁ TÌNH TRẠNG DINH DƯỠNG
+            </span>
+            <span><i>(Dành cho trẻ em)</i></span>
+            <div>
+                Số phiếu:&nbsp;<hs tag="b" [text]="context.tempData.hsBenhAn.SoPhieu"></hs>
+            </div>
+        </div>
+        <div class="col-6 font-weight-bold">
+            <span>Khoa: Khoa Cấp tính nam Tâm thần</span>
+        </div>
+    </div>
+
+
+
+    <div style="margin: 20px 0px">
+        <div class="row no-gutters">
+            <div class="col-6">
+                <hs-textarea-line label=" Họ tên bệnh nhi:"
+                    textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.HoTen"
+                    update="tempData.hsBenhAn.BenhNhan.HoTen"></hs-textarea-line>
+            </div>
+
+            <div class="col-3">
+                <hs-textarea-line label="Tháng tuổi/Tuổi:" textareaStyle="font-weight: bold;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.TuoiThai "
+                    update="tempData.hsBenhAn.BenhNhan.TuoiThai"></hs-textarea-line>
+            </div>
+            <div class="col-3">
+                <hs-textarea-line label=" Giới tính:" textareaStyle="font-weight: bold; text-transform: uppercase;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.GioiTinh"
+                    update="tempData.hsBenhAn.BenhNhan.GioiTinh"></hs-textarea-line>
+            </div>
+
+        </div>
+
+        <div class="row no-gutters">
+            <div class="col-12">
+                <hs-textarea-line label="Chuẩn đoán:" textareaStyle="font-weight: bold;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.ChuanDoan"
+                    update="tempData.hsBenhAn.BenhNhan.ChuanDoan"></hs-textarea-line>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-4">
+                <hs-textarea-line label="Cân nặng:" textareaStyle="font-weight: bold;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.CanNang"
+                    update="tempData.hsBenhAn.BenhNhan.CanNang"></hs-textarea-line>
+            </div>
+            <div class="col-4">
+                <hs-textarea-line label="Chiều cao:" textareaStyle="font-weight: bold;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.ChieuCao"
+                    update="tempData.hsBenhAn.BenhNhan.ChieuCao"></hs-textarea-line>
+            </div>
+
+            <div class="col-4">
+                <hs-textarea-line label="Chỉ số khối cơ thể (BMI):" textareaStyle="font-weight: bold;"
+                    [value]="context.tempData.hsBenhAn.BenhNhan.BMI"
+                    update="tempData.hsBenhAn.BenhNhan.BMI"></hs-textarea-line>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="col-12 font-weight-bold"><span>1.Đánh giá tình trạng suy dinh dưỡng</span></div>
+    <div class="table-container" style="font-size: 12pt">
+        <!-- Hàng 1 -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 30%; display: flex; align-items: center;">
+                <div class="col-12 text-center">
+                    <span>Cân nặng theo chiều cao/ chiều dài hoặc chỉ số khối cơ thể (BMI)</span>
+                </div>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 40%">
+                <div class="col-12">
+                    <span>&gt; -1 SD</span>
+                </div>
+                <div class="col-12">
+                    <span>-1 SD đến &gt; -2 SD</span>
+                </div>
+                <div class="col-12">
+                    <span>&le; -2 SD</span>
+                </div>
+            </div>
+
+            <div class="table-cell text-center" style="flex: 1 1 30%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="khong"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'0 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="mot"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'1 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'2 điểm'"></hs-input-check>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- hàng 2 -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 30%; display: flex; align-items: center;">
+
+                <div class="col-12 text-center">
+                    <span>Sụt cân trong 1 tháng qua</span>
+                </div>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 40%;">
+                <div class="col-12">
+                    <span>
+                        Không sụt cân
+                    </span>
+                </div>
+                <div class="col-12">
+                    <span>
+                        Tăng cân &lt; 50% so với chuẩn ở trẻ &lt; 2 tuổi
+                    </span>
+                </div>
+                <div class="col-12">
+                    <span>
+                        Tăng cân &lt; 25% so với chuẩn ở trẻ &lt; 2 tuổi
+                    </span>
+                </div>
+
+                <div class="col-12">
+                    <span>
+                        Sụt cân 7,5% trọng lượng ở trẻ &gt; 2 tuổi
+                    </span>
+                </div>
+
+                <div class="col-12">
+                    <span>
+                        Sụt cân 10% trọng lượng ở trẻ &gt; 2 tuổi
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="table-cell text-center" style="flex: 1 1 30%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="khong"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'0 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="mot"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'1 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'2 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="mot"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'1 điểm'"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BMI_Hang1" value="hai"
+                        update="tempData.hsBenhAn.BMI_Hang1" inputName="bmi_hang1"
+                        [afterText]="'2 điểm'"></hs-input-check>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- hàng Lượng ăn -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 30%; display: flex; align-items: center;">
+
+                <div class="col-12 text-center">
+                    <span>Lượng ăn/bú trong tuần qua</span>
+                </div>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 40%">
+                <div class="col-12">
+                    <span>Không giảm hoặc giảm nhẹ</span>
+                </div>
+                <div class="col-12">
+                    <span>Giảm &gt; 50% trong tuần qua</span>
+                </div>
+                <div class="col-12">
+                    <span>Giảm &gt; 75% trong tuần qua</span>
+                </div>
+
+            </div>
+            <div class="table-cell text-center" style="flex: 1 1 30%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="khonggiam"
+                        update="tempData.hsBenhAn.LuongAn" inputName="LuongAn" [afterText]="'0 điểm'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="giam50"
+                        update="tempData.hsBenhAn.LuongAn" inputName="LuongAn" [afterText]="'1 điểm'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.LuongAn" value="giam50"
+                        update="tempData.hsBenhAn.LuongAn" inputName="LuongAn" [afterText]="'2 điểm'">
+                    </hs-input-check>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- hàng Kết luận -->
+        <div class="table-row text-center font-weight-bold">
+            <div class="table-cell" style="flex: 1 1 30%;display: flex;align-items: center;">
+                <div class="col-12 text-center">
+                    <span><b>Kết luận</b></span>
+                </div>
+            </div>
+
+            <div class="table-cell text-right" style="flex: 1 1 40%">
+                <div class="col-12">
+                    <span>&lt; 2 điểm</span>
+                </div>
+                <div class="col-12">
+                    <span>&ge; 2 điểm</span>
+                </div>
+            </div>
+
+            <div class="table-cell text-center" style="flex: 1 1 30%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.BinhThuong" value="binhthuong"
+                        update="tempData.hsBenhAn.BinhThuong" inputName="KetLuanSDD" [afterText]="'Không SDD'">
+                    </hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.DinhDuong" value="co"
+                        update="tempData.hsBenhAn.DinhDuong" inputName="KetLuanSDD" [afterText]="'Suy dinh dưỡng'">
+                    </hs-input-check>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="col-12 font-weight-bold"><span>2. Kế hoạch can thiệp</span></div>
+    <div class="table-container" style="font-size: 12pt">
+        <!-- Hàng 1 -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 30%">
+                <span>Chỉ định chế độ ăn</span>
+            </div>
+            <div class="table-cell text-left" style="flex: 1 1 50%">
+                <div class="col-12">
+                    <span>Mã số:</span>
+                </div>
+            </div>
+            <div class="table-cell" style="flex: 1 1 20%">
+                <!-- Không cần input tại đây -->
+            </div>
+        </div>
+
+        <!-- Hàng 2 -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 30%;display: flex;align-items: center;justify-content: center;">
+                <span>Đường nuôi ăn</span>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 50%">
+                <div class="col-12"><span>Đường miệng</span></div>
+                <div class="col-12"><span>Ống thông</span></div>
+                <div class="col-12"><span>Tĩnh mạch</span></div>
+            </div>
+            <div class="table-cell text-left" style="flex: 1 1 20%">
+
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.DuongAn" value="mieng"
+                        update="tempData.hsBenhAn.DuongAn" inputName="duongan"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.DuongAn" value="ongthong"
+                        update="tempData.hsBenhAn.DuongAn" inputName="duongan"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.DuongAn" value="tm"
+                        update="tempData.hsBenhAn.DuongAn" inputName="duongan"></hs-input-check>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hàng 3 -->
+        <div class="table-row text-center">
+            <div class="table-cell" style="flex: 1 1 30%;display: flex;align-items: center;justify-content: center;">
+                <span>Mời hội chẩn dinh dưỡng</span>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 50%">
+                <div class="col-12"><span>Có</span></div>
+                <div class="col-12"><span>Không</span></div>
+            </div>
+            <div class="table-cell text-left" style="flex: 1 1 20%">
+
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.HoiChan" value="co"
+                        update="tempData.hsBenhAn.HoiChan" inputName="hoichan"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.HoiChan" value="khong"
+                        update="tempData.hsBenhAn.HoiChan" inputName="hoichan"></hs-input-check>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hàng 4 -->
+        <div class="table-row text-center font-weight-bold">
+            <div class="table-cell" style="flex: 1 1 30%;display: flex;align-items: center;justify-content: center;">
+                <span>Tái đánh giá</span>
+            </div>
+            <div class="table-cell text-right" style="flex: 1 1 50%">
+                <div class="col-12">
+                    <span>Sau 7 ngày (ở bệnh nhi không suy dinh dưỡng)</span>
+                </div>
+                <div class="col-12">
+                    <span>Sau 3 ngày (ở bệnh nhi suy dinh dưỡng)</span>
+                </div>
+            </div>
+            <div class="table-cell text-left" style="flex: 1 1 20%">
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.TaiDanhGia" value="sau7ngay"
+                        update="tempData.hsBenhAn.TaiDanhGia" inputName="taidanhgia"></hs-input-check>
+                </div>
+                <div class="col-12">
+                    <hs-input-check [selectedValue]="context.tempData.hsBenhAn.TaiDanhGia" value="sau3ngay"
+                        update="tempData.hsBenhAn.TaiDanhGia" inputName="taidanhgia"></hs-input-check>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row no-gutters">
+        <div class="col-6 offset-6">
+            <hs-datepicker [value]="context.tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA"
+                update="tempData.hsBenhAn.BenhAnChiTietObj.NgayKyTTBA" format="'Ngày' dd 'tháng' MM 'năm' yyyy"
+                inputStyle="text-align: center"></hs-datepicker>
+        </div>
+        <div class="col-6">
+            <div style="margin-left: 160px;">Cân nặng (kg)</div>
+
+            <div style="margin-left: 10px;">BMI (kg/m2) = ----------------------------------------</div>
+            <div style="margin-left: 120px;">Chiều cao (m) X chiều cao(m)</div>
+
+        </div>
+        <div class="col-6">
+            <div class="text-center font-weight-bold" style="font-size: 13.5pt">BÁC SĨ KHÁM BỆNH</div>
+            <hs-signature signaturePositionCode="TruongKhoa"
+                [signatureHistory]="context.tempData.DSHSLichSuKySos['TruongKhoa']">
+            </hs-signature>
+        </div>
+    </div>
+
+    <div class="row no-gutters" style="font-size: 13px;">
+        <div class="col-12">
+            <span>
+                (Tra kết quả BMI theo tuổi bằng biểu đồ Z-Score của Tổ chức Y tế thế giới)
+            </span>
+
+        </div>
+
+            <div class="col-12 ">
+                <span class="font-weight-bold">
+                    Đối tượng đánh giá:
+
+                </span>
+                <span>
+                    Tất cả bệnh nhi nhập viện đều cần được sàng lọc và đánh giá TTDD để có kế
+                    hoạch can thiệp dinh dưỡng kịp thời
+                </span>
+            </div>
+
+
+            <div class="col-12 ">
+                <span class="font-weight-bold">
+                    Cán bộ thực hiện:
+                </span>
+                <span>
+                    Bác sĩ điều trị
+                </span>
+            </div>
+
+
+
+            <div class="col-12 ">
+                <span class="font-weight-bold">
+                    Thời gian thực hiện:
+                </span>
+                <span>
+                    Trong vòng 36 giờ sau nhập viện
+                </span>
+            </div>
+
+            <div class="col-12 ">
+                <span class="font-weight-bold">
+                    Thời gian đánh giá:
+                </span>
+                <span>
+                    Bệnh nhi không SDD: tái đánh giá sau 7 ngày, bệnh nhi SDD: tái đánh giá sau
+                    3 ngày
+                </span>
+            </div>
+
+            <div class="col-12 ">
+                <span class="font-weight-bold">
+                    Mời hội chẩn dinh dưỡng:
+                </span>
+                <span>
+                    Do bác sĩ điều trị quyết định tùy theo từng trường hợp cụ thể
+                </span>
+            </div>
+
+            <div class="col-12 ">
+                <span class="font-weight-bold">
+                    Một số lưu ý:
+                </span>
+                <span>
+                   - Chỉ số cân nặng theo chiều cao/chiều dài: Cân nặng được tính = kg, chiều cao (chiều dài) tính bằng đơn vị cm (tra kết quả bằng biểu đồ Z-Score của tổ chức y tế thế giới năm 2006 ở trẻ bình thường hoặc biểu đồ Fenton ở trẻ sinh non tháng)
+                </span>
+            </div>
+
+
+
+    </div>
+
+    <div class="row no-gutters">
+        <div class="col-12 text-center">
+            <div style="margin-left: 160px;">Cân nặng thường có - cân nặng hiện tại</div>
+
+            <div style="margin-left: 10px;">Tỷ lệ sụt cân = ----------------------------------------</div>
+            <div style="margin-left: 120px;">Cân nặng thường có</div>
+
+        </div>
+    </div>
+
+    <div class="row no-gutters">
+        <div class="col-12 font-weight-bold">
+            <span>
+                - Lượng ăn/bú: Ước lượng qua hỏi bệnh sử
+            </span>
+        </div>
+        <div class="col-12 font-weight-bold">
+            <span>
+                - Các dấu hiệu tăng nguy cơ dinh dưỡng:
+            </span>
+        </div>
+    </div>
+   
+      <div class="row no-gutters font-weight-bold " style="padding-left: 16px;">
+        <div class="col-12 ">
+            <span>
+                + Phù
+            </span>
+        </div>
+        <div class="col-12">
+            <span>
+                + Bệnh nặng (đại phẫu, nhiễm trùng nặng, chấn thương nặng, ung thư,..)
+            </span>
+        </div>
+        <div class="col-12">
+            <span>
+                + Chu vi vòng cánh tay &lt; -2 SD
+            </span>
+        </div>
+        <div class="col-12">
+                  <span>+ BMI &gt; +2 SD</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div style="height: 30px"></div>
+</hoso-page>
